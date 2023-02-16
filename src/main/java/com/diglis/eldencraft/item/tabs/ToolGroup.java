@@ -15,7 +15,7 @@ public class ToolGroup extends ItemGroup {
     @Override
     public ItemStack makeIcon() {
         assert ItemInit.STEEL_PICKAXE != null;
-        return new ItemStack(ItemInit.BASTARD_SWORD.get());
+        return new ItemStack(ItemInit.STEEL_PICKAXE.get());
     }
 
 }

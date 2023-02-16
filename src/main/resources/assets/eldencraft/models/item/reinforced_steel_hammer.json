@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "eldencraft:item/reinforced_steel_hammer"
+  }
+}

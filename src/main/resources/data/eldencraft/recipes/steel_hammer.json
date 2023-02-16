@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ccc",
+    "lsl",
+    " s "
+  ],
+  "key": {
+    "s": {
+      "item": "minecraft:stick"
+    },
+    "c": {
+      "item": "eldencraft:steel_ingot"
+    },
+    "l": {
+      "item": "eldencraft:leather_strips"
+    }
+  },
+  "result": {
+    "item": "eldencraft:steel_hammer",
+    "count": 1
+  }
+}

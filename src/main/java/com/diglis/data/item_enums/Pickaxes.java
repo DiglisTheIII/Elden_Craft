@@ -7,10 +7,12 @@ import net.minecraft.item.Item.Properties;
 import net.minecraft.item.ItemTier;
 import net.minecraft.item.PickaxeItem;
 
+import java.util.HashSet;
+
 public enum Pickaxes {
 
     STEEL_PICKAXE;
-
+    static HashSet<Pickaxes> pickaxes = new HashSet<Pickaxes>();
     public PickaxeItem getItem() {
         Properties tab = new Item.Properties().tab(ToolGroup.ELDEN_CRAFT_TOOLS);
         switch(this) {
@@ -19,6 +21,16 @@ public enum Pickaxes {
             default:
                 return null;
         }
+    }
+
+    public static HashSet<Pickaxes> hashSetter() {
+        if(pickaxes.isEmpty()) {
+            for(Pickaxes p : Pickaxes.values()) {
+                pickaxes.add(p);
+            }
+        }
+
+        return pickaxes;
     }
 
     public String getName() {

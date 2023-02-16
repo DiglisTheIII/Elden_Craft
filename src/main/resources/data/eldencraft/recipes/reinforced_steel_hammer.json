@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "bhb",
+    "srs",
+    " r "
+  ],
+  "key": {
+    "h": {
+      "item": "eldencraft:steel_hammer"
+    },
+    "b": {
+      "item": "eldencraft:steel_block"
+    },
+    "s": {
+      "item": "eldencraft:smithing_stone"
+    },
+    "r": {
+      "item": "eldencraft:reinforced_stick"
+    }
+  },
+  "result": {
+    "item": "eldencraft:reinforced_steel_hammer",
+    "count": 1
+  }
+}
