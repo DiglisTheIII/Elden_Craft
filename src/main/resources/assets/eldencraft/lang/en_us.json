@@ -1,0 +1,22 @@
+{
+
+  "item.eldencraft.steel_ingot": "Steel Ingot",
+  "item.eldencraft.steel_chunk": "Steel Chunk",
+  "item.eldencraft.carbon_shard": "Carbon Shard",
+  "item.eldencraft.leather_strips": "Leather Strips",
+  "item.eldencraft.smithing_stone": "Smithing Stone",
+  "item.eldencraft.bastard_sword": "Bastard Sword",
+  "item.eldencraft.steel_hammer": "Steel Hammer",
+  "item.eldencraft.short_sword": "Shortsword",
+  "item.eldencraft.black_knife": "Black Knife",
+  "item.eldencraft.steel_pickaxe": "Steel Pickaxe",
+
+  "block.eldencraft.carbon_runoff": "Carbon Runoff",
+  "block.eldencraft.steel_block": "Steel Block",
+
+  "itemGroup.elden_craft_misc": "Elden Craft: Misc",
+  "itemGroup.elden_craft_wpn": "Elden Craft: Weapons",
+  "itemGroup.elden_craft_blocks": "Elden Craft: Blocks",
+  "itemGroup.elden_craft_tools": "Elden Craft: Tools"
+
+}

@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "sss",
+    " m ",
+    " w "
+  ],
+  "key": {
+    "s": {
+      "item": "eldencraft:steel_ingot"
+    },
+    "m": {
+      "item": "eldencraft:smithing_stone"
+    },
+    "w": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "eldencraft:steel_pickaxe",
+    "count": 1
+  }
+}
