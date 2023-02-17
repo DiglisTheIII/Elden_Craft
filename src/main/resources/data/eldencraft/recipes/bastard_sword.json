@@ -1,23 +1,12 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    " s ",
-    " m ",
-    " w "
-  ],
-  "key": {
-    "s": {
-      "item": "eldencraft:steel_ingot"
-    },
-    "m": {
-      "item": "eldencraft:smithing_stone"
-    },
-    "w": {
-      "item": "minecraft:stick"
-    }
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "eldencraft:basic_steel_frame"
+  },
+  "addition": {
+    "item": "eldencraft:smithing_stone"
   },
   "result": {
-    "item": "eldencraft:bastard_sword",
-    "count": 1
+    "item": "eldencraft:bastard_sword"
   }
 }

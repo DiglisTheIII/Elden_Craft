@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " ",
+    "b",
+    "h"
+  ],
+  "key": {
+    "b": {
+      "item": "eldencraft:steel_blade"
+    },
+    "h": {
+      "item": "eldencraft:steel_hilt"
+    }
+  },
+  "result": {
+    "item": "eldencraft:basic_steel_frame"
+  }
+}

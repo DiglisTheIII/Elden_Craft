@@ -15,6 +15,8 @@ public enum Items {
     STEEL_HAMMER,
     REINFORCED_STEEL_HAMMER,
     REINFORCED_STICK,
+    STEEL_HILT,
+    STEEL_BLADE,
     SMITHING_STONE;
 
     static HashSet<Items> items = new HashSet<Items>();
@@ -30,6 +32,8 @@ public enum Items {
             case STEEL_HAMMER:
             case REINFORCED_STEEL_HAMMER:
             case REINFORCED_STICK:
+            case STEEL_HILT:
+            case STEEL_BLADE:
                 return new Item(tab);
             default:
                 return null;
@@ -63,6 +67,10 @@ public enum Items {
                 return "reinforced_steel_hammer";
             case REINFORCED_STICK:
                 return "reinforced_stick";
+            case STEEL_HILT:
+                return "steel_hilt";
+            case STEEL_BLADE:
+                return "steel_blade";
             default:
                 return null;
         }

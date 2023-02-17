@@ -14,4 +14,5 @@ public class BastardSword extends SwordItem {
     public boolean hurtEnemy(ItemStack stack, LivingEntity target, LivingEntity user) {
         return super.hurtEnemy(stack, target, user);
     }
+
 }

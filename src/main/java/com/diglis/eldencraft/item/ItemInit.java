@@ -7,6 +7,7 @@ import com.diglis.eldencraft.EldenCraft;
 import net.minecraft.item.Item;
 import net.minecraft.item.PickaxeItem;
 import net.minecraft.item.SwordItem;
+import net.minecraft.item.TieredItem;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -15,6 +16,8 @@ import java.util.HashSet;
 
 public class ItemInit {
 
+
+    //Blah blah boring boilerplate.
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, EldenCraft.MOD_ID);
 
@@ -26,7 +29,10 @@ public class ItemInit {
     public static final RegistryObject<Item> STEEL_HAMMER = REGISTER_ITEM(Items.STEEL_HAMMER);
     public static final RegistryObject<Item> REINFORCED_STEEL_HAMMER = REGISTER_ITEM(Items.REINFORCED_STEEL_HAMMER);
     public static final RegistryObject<Item> REINFORCED_STICK = REGISTER_ITEM(Items.REINFORCED_STICK);
+    public static final RegistryObject<Item> STEEL_HILT = REGISTER_ITEM(Items.STEEL_HILT);
+    public static final RegistryObject<Item> STEEL_BLADE = REGISTER_ITEM(Items.STEEL_BLADE);
 
+    public static final RegistryObject<Item> BASIC_STEEL_FRAME = REGISTER_ITEM(Swords.BASIC_STEEL_FRAME);
     public static final RegistryObject<SwordItem> SHORT_SWORD = REGISTER_ITEM(Swords.SHORT_SWORD);
     public static final RegistryObject<SwordItem> BASTARD_SWORD = REGISTER_ITEM(Swords.BASTARD_SWORD);
     public static final RegistryObject<SwordItem> BLACK_KNIFE = REGISTER_ITEM(Swords.BLACK_KNIFE);
@@ -34,9 +40,14 @@ public class ItemInit {
 
 
     public static RegistryObject REGISTER_ITEM(Enum input) {
+        //Setting the HashSets to the Enums#hashSetter method
         HashSet<Swords> swords = Swords.hashSetter();
         HashSet<Pickaxes> pickaxes = Pickaxes.hashSetter();
         HashSet<Items> items = Items.hashSetter();
+
+        /* So because Enum objects are weird, this is checking if the values pulled
+         * hashSetter contain the Enum value of whichever type of Item I am registering (see parameter).
+         */
         if(swords.contains(input)) {
             Swords inputCasted = (Swords) input;
             return ITEMS.register(inputCasted.getName(), inputCasted::getItem);

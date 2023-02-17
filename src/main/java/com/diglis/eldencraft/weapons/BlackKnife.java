@@ -15,6 +15,12 @@ public class BlackKnife extends SwordItem {
 
     @Override
     public boolean hurtEnemy(ItemStack stack, LivingEntity target, LivingEntity user) {
+        /*
+         * If user is at max health, when the target is hit, reduce its total health by 3,
+         * if the user has night vision and target is a zombie, the target will die immediately,
+         * if no night vision, the target will burn. If the target is not a zombie, it will get poisoned.
+         */
+
         if(user.getHealth() == user.getMaxHealth()) {
             target.setHealth(target.getHealth() - 3f);
             System.out.println(target.getHealth());

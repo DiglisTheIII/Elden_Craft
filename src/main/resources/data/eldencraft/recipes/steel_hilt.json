@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "lil",
+    "lsl",
+    "lil"
+  ],
+  "key": {
+    "s": {
+      "item": "eldencraft:reinforced_stick"
+    },
+    "l": {
+      "item": "eldencraft:leather_strips"
+    },
+    "i": {
+      "item": "eldencraft:steel_ingot"
+    }
+  },
+  "result": {
+    "item": "eldencraft:steel_hilt",
+    "count": 1
+  }
+}

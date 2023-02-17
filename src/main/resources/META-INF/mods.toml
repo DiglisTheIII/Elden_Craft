@@ -6,7 +6,10 @@ modId="eldencraft"
 version="${file.jarVersion}"
 displayName="eldencraft"
 logoFile="examplemod.png"
-credits="Thanks for this example mod goes to Java"
+credits='''
+    Codebase writer, Item/Block data management, Textures: Diglis
+    (Future) Coder, Event handling: Thomas
+'''
 authors="Love, Cheese and small house plants"
 description='''
 
