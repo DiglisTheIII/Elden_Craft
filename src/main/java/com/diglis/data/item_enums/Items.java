@@ -1,6 +1,6 @@
 package com.diglis.data.item_enums;
 
-import com.diglis.eldencraft.item.tabs.MiscGroup;
+import com.diglis.eldencraft.item.tabs.EldenCraftTabItems;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.Properties;
 
@@ -17,18 +17,34 @@ public enum Items {
     REINFORCED_STICK,
     STEEL_HILT,
     STEEL_BLADE,
-    SMITHING_STONE;
+    SMITHING_STONE_1,
+    SMITHING_STONE_2,
+    SMITHING_STONE_3,
+    SMITHING_STONE_4,
+    SMITHING_STONE_5,
+    SMITHING_STONE_6,
+    SMITHING_STONE_7,
+    SMITHING_STONE_8,
+    ANCIENT_DRAGON_SMITHING_STONE;
 
     static HashSet<Items> items = new HashSet<Items>();
 
     public Item getItem() {
-        Properties tab = new Item.Properties().tab(MiscGroup.ELDEN_CRAFT_MISC);
+        Properties tab = new Item.Properties().tab(EldenCraftTabItems.ELDEN_CRAFT_TAB_ITEMS);
         switch(this) {
             case STEEL_INGOT:
             case STEEL_CHUNK:
             case CARBON_SHARD:
             case LEATHER_STRIPS:
-            case SMITHING_STONE:
+            case SMITHING_STONE_1:
+            case SMITHING_STONE_2:
+            case SMITHING_STONE_3:
+            case SMITHING_STONE_4:
+            case SMITHING_STONE_5:
+            case SMITHING_STONE_6:
+            case SMITHING_STONE_7:
+            case SMITHING_STONE_8:
+            case ANCIENT_DRAGON_SMITHING_STONE:
             case STEEL_HAMMER:
             case REINFORCED_STEEL_HAMMER:
             case REINFORCED_STICK:
@@ -59,8 +75,24 @@ public enum Items {
                 return "carbon_shard";
             case LEATHER_STRIPS:
                 return "leather_strips";
-            case SMITHING_STONE:
-                return "smithing_stone";
+            case SMITHING_STONE_1:
+                return "smithing_stone_1";
+            case SMITHING_STONE_2:
+                return "smithing_stone_2";
+            case SMITHING_STONE_3:
+                return "smithing_stone_3";
+            case SMITHING_STONE_4:
+                return "smithing_stone_4";
+            case SMITHING_STONE_5:
+                return "smithing_stone_5";
+            case SMITHING_STONE_6:
+                return "smithing_stone_6";
+            case SMITHING_STONE_7:
+                return "smithing_stone_7";
+            case SMITHING_STONE_8:
+                return "smithing_stone_8";
+            case ANCIENT_DRAGON_SMITHING_STONE:
+                return "ancient_dragon_smithing_stone";
             case STEEL_HAMMER:
                 return "steel_hammer";
             case REINFORCED_STEEL_HAMMER:

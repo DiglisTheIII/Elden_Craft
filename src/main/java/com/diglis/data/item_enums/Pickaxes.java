@@ -1,7 +1,7 @@
 package com.diglis.data.item_enums;
 
 import com.diglis.eldencraft.item.pickaxes.SteelPickaxe;
-import com.diglis.eldencraft.item.tabs.ToolGroup;
+import com.diglis.eldencraft.item.tabs.EldenCraftTabTools;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.Properties;
 import net.minecraft.item.ItemTier;
@@ -14,7 +14,7 @@ public enum Pickaxes {
     STEEL_PICKAXE;
     static HashSet<Pickaxes> pickaxes = new HashSet<Pickaxes>();
     public PickaxeItem getItem() {
-        Properties tab = new Item.Properties().tab(ToolGroup.ELDEN_CRAFT_TOOLS);
+        Properties tab = new Item.Properties().tab(EldenCraftTabTools.ELDEN_CRAFT_TAB_TOOLS);
         switch(this) {
             case STEEL_PICKAXE:
                 return new SteelPickaxe(ItemTier.IRON, 2, 4.5f, tab);

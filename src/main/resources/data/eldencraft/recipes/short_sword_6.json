@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "eldencraft:short_sword_5"
+  },
+  "addition": {
+    "item": "eldencraft:smithing_stone_7"
+  },
+  "result": {
+    "item": "eldencraft:short_sword_6"
+  }
+}

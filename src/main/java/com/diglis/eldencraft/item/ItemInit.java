@@ -21,11 +21,20 @@ public class ItemInit {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, EldenCraft.MOD_ID);
 
+    //Big ass block of code!
     public static final RegistryObject<Item> STEEL_INGOT = REGISTER_ITEM(Items.STEEL_INGOT);
     public static final RegistryObject<Item> STEEL_CHUNK = REGISTER_ITEM(Items.STEEL_CHUNK);
     public static final RegistryObject<Item> CARBON_SHARD = REGISTER_ITEM(Items.CARBON_SHARD);
     public static final RegistryObject<Item> LEATHER_STRIPS = REGISTER_ITEM(Items.LEATHER_STRIPS);
-    public static final RegistryObject<Item> SMITHING_STONE = REGISTER_ITEM(Items.SMITHING_STONE);
+    public static final RegistryObject<Item> SMITHING_STONE_1 = REGISTER_ITEM(Items.SMITHING_STONE_1);
+    public static final RegistryObject<Item> SMITHING_STONE_2 = REGISTER_ITEM(Items.SMITHING_STONE_2);
+    public static final RegistryObject<Item> SMITHING_STONE_3 = REGISTER_ITEM(Items.SMITHING_STONE_3);
+    public static final RegistryObject<Item> SMITHING_STONE_4 = REGISTER_ITEM(Items.SMITHING_STONE_4);
+    public static final RegistryObject<Item> SMITHING_STONE_5 = REGISTER_ITEM(Items.SMITHING_STONE_5);
+    public static final RegistryObject<Item> SMITHING_STONE_6 = REGISTER_ITEM(Items.SMITHING_STONE_6);
+    public static final RegistryObject<Item> SMITHING_STONE_7 = REGISTER_ITEM(Items.SMITHING_STONE_7);
+    public static final RegistryObject<Item> SMITHING_STONE_8 = REGISTER_ITEM(Items.SMITHING_STONE_8);
+    public static final RegistryObject<Item> ANCIENT_DRAGON_SMITHING_STONE = REGISTER_ITEM(Items.ANCIENT_DRAGON_SMITHING_STONE);
     public static final RegistryObject<Item> STEEL_HAMMER = REGISTER_ITEM(Items.STEEL_HAMMER);
     public static final RegistryObject<Item> REINFORCED_STEEL_HAMMER = REGISTER_ITEM(Items.REINFORCED_STEEL_HAMMER);
     public static final RegistryObject<Item> REINFORCED_STICK = REGISTER_ITEM(Items.REINFORCED_STICK);
@@ -33,8 +42,22 @@ public class ItemInit {
     public static final RegistryObject<Item> STEEL_BLADE = REGISTER_ITEM(Items.STEEL_BLADE);
 
     public static final RegistryObject<Item> BASIC_STEEL_FRAME = REGISTER_ITEM(Swords.BASIC_STEEL_FRAME);
-    public static final RegistryObject<SwordItem> SHORT_SWORD = REGISTER_ITEM(Swords.SHORT_SWORD);
     public static final RegistryObject<SwordItem> BASTARD_SWORD = REGISTER_ITEM(Swords.BASTARD_SWORD);
+    public static final RegistryObject<SwordItem> BASTARD_SWORD_1 = REGISTER_ITEM(Swords.BASTARD_SWORD_1);
+    public static final RegistryObject<SwordItem> BASTARD_SWORD_2 = REGISTER_ITEM(Swords.BASTARD_SWORD_2);
+    public static final RegistryObject<SwordItem> BASTARD_SWORD_3 = REGISTER_ITEM(Swords.BASTARD_SWORD_3);
+    public static final RegistryObject<SwordItem> BASTARD_SWORD_4 = REGISTER_ITEM(Swords.BASTARD_SWORD_4);
+    public static final RegistryObject<SwordItem> BASTARD_SWORD_5 = REGISTER_ITEM(Swords.BASTARD_SWORD_5);
+    public static final RegistryObject<SwordItem> BASTARD_SWORD_6 = REGISTER_ITEM(Swords.BASTARD_SWORD_6);
+    public static final RegistryObject<SwordItem> BASTARD_SWORD_7 = REGISTER_ITEM(Swords.BASTARD_SWORD_7);
+    public static final RegistryObject<SwordItem> SHORT_SWORD = REGISTER_ITEM(Swords.SHORT_SWORD);
+    public static final RegistryObject<SwordItem> SHORT_SWORD_1 = REGISTER_ITEM(Swords.SHORT_SWORD_1);
+    public static final RegistryObject<SwordItem> SHORT_SWORD_2 = REGISTER_ITEM(Swords.SHORT_SWORD_2);
+    public static final RegistryObject<SwordItem> SHORT_SWORD_3 = REGISTER_ITEM(Swords.SHORT_SWORD_3);
+    public static final RegistryObject<SwordItem> SHORT_SWORD_4 = REGISTER_ITEM(Swords.SHORT_SWORD_4);
+    public static final RegistryObject<SwordItem> SHORT_SWORD_5 = REGISTER_ITEM(Swords.SHORT_SWORD_5);
+    public static final RegistryObject<SwordItem> SHORT_SWORD_6 = REGISTER_ITEM(Swords.SHORT_SWORD_6);
+    public static final RegistryObject<SwordItem> SHORT_SWORD_7 = REGISTER_ITEM(Swords.SHORT_SWORD_7);
     public static final RegistryObject<SwordItem> BLACK_KNIFE = REGISTER_ITEM(Swords.BLACK_KNIFE);
     public static final RegistryObject<PickaxeItem> STEEL_PICKAXE = REGISTER_ITEM(Pickaxes.STEEL_PICKAXE);
 

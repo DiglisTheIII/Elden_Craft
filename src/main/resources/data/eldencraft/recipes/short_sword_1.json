@@ -1,12 +1,12 @@
 {
   "type": "minecraft:smithing",
   "base": {
-    "item": "eldencraft:basic_steel_frame"
+    "item": "eldencraft:eldencraft:short_sword"
   },
   "addition": {
     "item": "eldencraft:smithing_stone_2"
   },
   "result": {
-    "item": "eldencraft:short_sword"
+    "item": "eldencraft:eldencraft:short_sword_1"
   }
 }

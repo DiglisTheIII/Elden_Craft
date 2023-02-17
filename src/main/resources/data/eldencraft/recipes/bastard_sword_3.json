@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "eldencraft:bastard_sword_2"
+  },
+  "addition": {
+    "item": "eldencraft:smithing_stone_4"
+  },
+  "result": {
+    "item": "eldencraft:bastard_sword_3"
+  }
+}

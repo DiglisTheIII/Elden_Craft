@@ -1,12 +1,14 @@
 package com.diglis.eldencraft;
 
 import com.diglis.eldencraft.block.BlockInit;
+import com.diglis.eldencraft.block.generation.GenerateOres;
 import com.diglis.eldencraft.item.ItemInit;
-import com.diglis.eldencraft.item.tabs.BlockGroup;
+import com.diglis.eldencraft.item.tabs.EldenCraftTabBlocks;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.RegistryObject;
@@ -28,12 +30,13 @@ public class EldenCraft
         BlockInit.BLOCKS.register(eventBus);
 
         MinecraftForge.EVENT_BUS.register(this);
+        MinecraftForge.EVENT_BUS.addListener(EventPriority.HIGH, GenerateOres::addOres);
     }
 
     @SubscribeEvent
     public static void onRegisterItems(final RegistryEvent.Register<Item> event) {
         BlockInit.BLOCKS.getEntries().stream().map(RegistryObject::get).forEach(block -> event.getRegistry()
-                .register(new BlockItem(block, new Item.Properties().tab(BlockGroup.ELDEN_CRAFT_BLOCKS))
+                .register(new BlockItem(block, new Item.Properties().tab(EldenCraftTabBlocks.ELDEN_CRAFT_TAB_BLOCKS))
                         .setRegistryName(block.getRegistryName())));
     }
 
