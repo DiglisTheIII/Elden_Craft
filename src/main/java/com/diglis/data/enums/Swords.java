@@ -192,7 +192,7 @@ public enum Swords {
 
     /*
      *  Sets all HashSets of type Swords (this), then returns
-     *  a HashSet which can be assigned elsewhere. All enums have a copy of this
+     *  a HashSet which can be assigned in any one of the Init classes. All enums have a copy of this
      *  method, so I will keep this description here.
      */
     public static HashSet<Swords> hashSetter() {
