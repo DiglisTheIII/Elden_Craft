@@ -28,6 +28,7 @@ import net.minecraftforge.fml.common.Mod;
 import java.util.*;
 
 @Mod.EventBusSubscriber(modid = EldenCraft.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
+@SuppressWarnings("unused")
 public enum Swords {
 
     BASIC_STEEL_FRAME,
@@ -55,9 +56,10 @@ public enum Swords {
     ZWEIHANDER_5,
     ZWEIHANDER_6,
     ZWEIHANDER_7,
+    CRYSTAL_SWORD,
     BASIC_CRYSTAL_FRAME,
     BLACK_KNIFE;
-    static HashSet<Swords> swords = new HashSet<>();
+    static final HashSet<Swords> swords = new HashSet<>();
     static final PlayerEntity player = Minecraft.getInstance().player;
 
     public SwordItem getItem() {
@@ -112,6 +114,8 @@ public enum Swords {
                 return new Zweihander(ItemTier.IRON, 17, 1f, variants);
             case ZWEIHANDER_7:
                 return new Zweihander(ItemTier.IRON, 18, 1f, variants);
+            case CRYSTAL_SWORD:
+                return new CrystalSword(ItemTier.DIAMOND, 14, 5f, tab);
             case BLACK_KNIFE:
                 return new BlackKnife(ItemTier.NETHERITE, 9, 15f, tab);
             case BASIC_STEEL_FRAME:
@@ -173,6 +177,8 @@ public enum Swords {
                 return "zweihander_6";
             case ZWEIHANDER_7:
                 return "zweihander_7";
+            case CRYSTAL_SWORD:
+                return "crystal_sword";
             case BLACK_KNIFE:
                 return "black_knife";
             case BASIC_STEEL_FRAME:
@@ -201,7 +207,6 @@ public enum Swords {
     public static void onClickEvent(InputEvent.ClickInputEvent event) {
         PlayerEntity player = Minecraft.getInstance().player;
         assert player != null;
-        Collection<EffectInstance> effectsOnPlayer = player.getActiveEffects();
         if(player.getItemInHand(Hand.MAIN_HAND).getItem() instanceof BlackKnife) {
             if(event.getKeyBinding().matchesMouse(1) && player.isOnGround() && !player.isHurt()) {
                 player.addEffect(new EffectInstance(Effects.LEVITATION, 180, 2));
@@ -250,6 +255,7 @@ public enum Swords {
                 player.addEffect(effects[3]);
                 player.addEffect(effects[4]);
             }
+            //TODO Textures for Somber Smithing Stones
         } else if(player.getItemInHand(Hand.MAIN_HAND).getItem() instanceof BlackKnife) {
             //Heals player if they have a piece of armor with feather falling or projectile protection
             Iterable<ItemStack> slots = player.getArmorSlots();

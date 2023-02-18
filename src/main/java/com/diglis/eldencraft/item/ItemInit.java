@@ -3,6 +3,7 @@ package com.diglis.eldencraft.item;
 import com.diglis.data.item_enums.*;
 import com.diglis.data.item_enums.Items;
 import com.diglis.eldencraft.EldenCraft;
+import com.mojang.realmsclient.gui.screens.RealmsGenericErrorScreen;
 import net.minecraft.item.*;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
@@ -32,6 +33,12 @@ public class ItemInit {
     public static final RegistryObject<Item> SMITHING_STONE_7 = REGISTER_ITEM(Items.SMITHING_STONE_7);
     public static final RegistryObject<Item> SMITHING_STONE_8 = REGISTER_ITEM(Items.SMITHING_STONE_8);
     public static final RegistryObject<Item> ANCIENT_DRAGON_SMITHING_STONE = REGISTER_ITEM(Items.ANCIENT_DRAGON_SMITHING_STONE);
+    public static final RegistryObject<Item> SOMBER_SMITHING_STONE_1 = REGISTER_ITEM(Items.SOMBER_SMITHING_STONE_1);
+    public static final RegistryObject<Item> SOMBER_SMITHING_STONE_2 = REGISTER_ITEM(Items.SOMBER_SMITHING_STONE_2);
+    public static final RegistryObject<Item> SOMBER_SMITHING_STONE_3 = REGISTER_ITEM(Items.SOMBER_SMITHING_STONE_3);
+    public static final RegistryObject<Item> SOMBER_SMITHING_STONE_4 = REGISTER_ITEM(Items.SOMBER_SMITHING_STONE_4);
+    public static final RegistryObject<Item> SOMBER_SMITHING_STONE_5 = REGISTER_ITEM(Items.SOMBER_SMITHING_STONE_5);
+    public static final RegistryObject<Item> SOMBER_SMITHING_STONE_6 = REGISTER_ITEM(Items.SOMBER_SMITHING_STONE_6);
     public static final RegistryObject<Item> SHATTERED_CRYSTAL = REGISTER_ITEM(Items.SHATTERED_CRYSTAL);
     public static final RegistryObject<Item> CRYSTAL_GEM = REGISTER_ITEM(Items.CRYSTAL_GEM);
     public static final RegistryObject<Item> STEEL_HAMMER = REGISTER_ITEM(Items.STEEL_HAMMER);
@@ -68,6 +75,7 @@ public class ItemInit {
     public static final RegistryObject<SwordItem> ZWEIHANDER_5 = REGISTER_ITEM(Swords.ZWEIHANDER_5);
     public static final RegistryObject<SwordItem> ZWEIHANDER_6 = REGISTER_ITEM(Swords.ZWEIHANDER_6);
     public static final RegistryObject<SwordItem> ZWEIHANDER_7 = REGISTER_ITEM(Swords.ZWEIHANDER_7);
+    public static final RegistryObject<SwordItem> CRYSTAL_SWORD = REGISTER_ITEM(Swords.CRYSTAL_SWORD);
     public static final RegistryObject<SwordItem> BLACK_KNIFE = REGISTER_ITEM(Swords.BLACK_KNIFE);
     public static final RegistryObject<PickaxeItem> STEEL_PICKAXE = REGISTER_ITEM(Pickaxes.STEEL_PICKAXE);
     public static final RegistryObject<ShovelItem> STEEL_SHOVEL = REGISTER_ITEM(Shovels.STEEL_SHOVEL);

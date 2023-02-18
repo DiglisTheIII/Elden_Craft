@@ -29,6 +29,12 @@ public enum Items {
     SMITHING_STONE_7,
     SMITHING_STONE_8,
     ANCIENT_DRAGON_SMITHING_STONE,
+    SOMBER_SMITHING_STONE_1,
+    SOMBER_SMITHING_STONE_2,
+    SOMBER_SMITHING_STONE_3,
+    SOMBER_SMITHING_STONE_4,
+    SOMBER_SMITHING_STONE_5,
+    SOMBER_SMITHING_STONE_6,
     SHATTERED_CRYSTAL,
     CRYSTAL_GEM;
 
@@ -50,6 +56,12 @@ public enum Items {
             case SMITHING_STONE_7:
             case SMITHING_STONE_8:
             case ANCIENT_DRAGON_SMITHING_STONE:
+            case SOMBER_SMITHING_STONE_1:
+            case SOMBER_SMITHING_STONE_2:
+            case SOMBER_SMITHING_STONE_3:
+            case SOMBER_SMITHING_STONE_4:
+            case SOMBER_SMITHING_STONE_5:
+            case SOMBER_SMITHING_STONE_6:
             case SHATTERED_CRYSTAL:
             case CRYSTAL_GEM:
             case STEEL_HAMMER:
@@ -100,6 +112,18 @@ public enum Items {
                 return "smithing_stone_8";
             case ANCIENT_DRAGON_SMITHING_STONE:
                 return "ancient_dragon_smithing_stone";
+            case SOMBER_SMITHING_STONE_1:
+                return "somber_smithing_stone_1";
+            case SOMBER_SMITHING_STONE_2:
+                return "somber_smithing_stone_2";
+            case SOMBER_SMITHING_STONE_3:
+                return "somber_smithing_stone_3";
+            case SOMBER_SMITHING_STONE_4:
+                return "somber_smithing_stone_4";
+            case SOMBER_SMITHING_STONE_5:
+                return "somber_smithing_stone_5";
+            case SOMBER_SMITHING_STONE_6:
+                return "somber_smithing_stone_6";
             case SHATTERED_CRYSTAL:
                 return "shattered_crystal";
             case CRYSTAL_GEM:
