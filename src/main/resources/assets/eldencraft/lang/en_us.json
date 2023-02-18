@@ -60,12 +60,23 @@
   "item.eldencraft.riveted_wooden_shield": "Riveted Wooden Shield",
   "item.eldencraft.shattered_crystal": "Shattered Crystal",
   "item.eldencraft.crystal_gem": "Crystal Gem",
+  "item.eldencraft.malikeths_helm": "Maliketh's Helm",
+  "item.eldencraft.malikeths_armor": "Maliketh's Armor",
+  "item.eldencraft.malikeths_greaves": "Maliketh's Greaves",
+  "item.eldencraft.malikeths_boots": "Maliketh's Boots",
+  "item.eldencraft.malikeths_helm_e": "Deathbound Maliketh's Helm",
+  "item.eldencraft.malikeths_armor_e": "Deathbound Maliketh's Armor",
+  "item.eldencraft.malikeths_greaves_e": "Deathbound Maliketh's Greaves",
+  "item.eldencraft.malikeths_boots_e": "Deathbound Maliketh's Boots",
+
+  "enchantment.eldencraft.death_aura": "Death Aura",
 
   "block.eldencraft.carbon_runoff": "Carbon Runoff",
   "block.eldencraft.steel_block": "Steel Block",
   "block.eldencraft.natural_geode": "Natural Geode",
   "block.eldencraft.crystal_ore": "Crystal Ore",
 
+  "itemGroup.elden_craft_armor": "Elden Craft: Armor",
   "itemGroup.elden_craft_weapons": "Elden Craft: Weapons",
   "itemGroup.elden_craft_tools": "Elden Craft: Tools",
   "itemGroup.elden_craft_items": "Elden Craft: Misc",

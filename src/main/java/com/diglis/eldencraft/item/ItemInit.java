@@ -1,9 +1,8 @@
 package com.diglis.eldencraft.item;
 
-import com.diglis.data.item_enums.*;
-import com.diglis.data.item_enums.Items;
+import com.diglis.data.enums.*;
+import com.diglis.data.enums.Items;
 import com.diglis.eldencraft.EldenCraft;
-import com.mojang.realmsclient.gui.screens.RealmsGenericErrorScreen;
 import net.minecraft.item.*;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
@@ -82,9 +81,20 @@ public class ItemInit {
     public static final RegistryObject<AxeItem> STEEL_AXE = REGISTER_ITEM(Axes.STEEL_AXE);
     public static final RegistryObject<ShieldItem> RIVETED_WOODEN_SHIELD = REGISTER_ITEM(Shields.RIVETED_WOODEN_SHIELD);
 
+    public static final RegistryObject<ArmorItem> MALIKETHS_HELM = REGISTER_ITEM(Armor.MALIKETHS_HELM);
+    public static final RegistryObject<ArmorItem> MALIKETHS_ARMOR = REGISTER_ITEM(Armor.MALIKETHS_ARMOR);
+    public static final RegistryObject<ArmorItem> MALIKETHS_GREAVES = REGISTER_ITEM(Armor.MALIKETHS_GREAVES);
+    public static final RegistryObject<ArmorItem> MALIKETHS_BOOTS = REGISTER_ITEM(Armor.MALIKETHS_BOOTS);
+    public static final RegistryObject<ArmorItem> MALIKETHS_HELM_E = REGISTER_ITEM(Armor.MALIKETHS_HELM_E);
+    public static final RegistryObject<ArmorItem> MALIKETHS_ARMOR_E = REGISTER_ITEM(Armor.MALIKETHS_ARMOR_E);
+    public static final RegistryObject<ArmorItem> MALIKETHS_GREAVES_E = REGISTER_ITEM(Armor.MALIKETHS_GREAVES_E);
+    public static final RegistryObject<ArmorItem> MALIKETHS_BOOTS_E = REGISTER_ITEM(Armor.MALIKETHS_BOOTS_E);
+
+
 
     public static RegistryObject REGISTER_ITEM(Enum input) {
         //Setting the HashSets to the Enums#hashSetter method
+        HashSet<Armor> armor = Armor.hashSetter();
         HashSet<Swords> swords = Swords.hashSetter();
         HashSet<Pickaxes> pickaxes = Pickaxes.hashSetter();
         HashSet<Items> items = Items.hashSetter();
@@ -95,7 +105,10 @@ public class ItemInit {
         /* So because Enum objects are weird, this is checking if the values pulled
          * hashSetter contain the Enum value of whichever type of Item I am registering (see parameter).
          */
-        if(swords.contains(input)) {
+        if(armor.contains(input)) {
+            Armor inputCasted = (Armor) input;
+            return ITEMS.register(inputCasted.getName(), inputCasted::getItem);
+        } else if(swords.contains(input)) {
             Swords inputCasted = (Swords) input;
             return ITEMS.register(inputCasted.getName(), inputCasted::getItem);
         } else if(pickaxes.contains(input)) {

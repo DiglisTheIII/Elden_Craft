@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "hhh",
+    "hdh",
+    "   "
+  ],
+  "key": {
+    "h": {
+      "item": "minecraft:netherite_ingot"
+    },
+    "d": {
+      "item": "minecraft:diamond"
+    }
+  },
+  "result": {
+    "item": "eldencraft:malikeths_helm_e",
+    "count": 1
+  }
+}

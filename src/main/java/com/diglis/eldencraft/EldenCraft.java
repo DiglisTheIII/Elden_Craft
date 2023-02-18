@@ -2,6 +2,7 @@ package com.diglis.eldencraft;
 
 import com.diglis.eldencraft.block.BlockInit;
 import com.diglis.eldencraft.block.generation.GenerateOres;
+import com.diglis.eldencraft.effects.EffectsInit;
 import com.diglis.eldencraft.item.ItemInit;
 import com.diglis.eldencraft.item.tabs.EldenCraftTabBlocks;
 import net.minecraft.item.BlockItem;
@@ -28,6 +29,7 @@ public class EldenCraft
 
         ItemInit.ITEMS.register(eventBus);
         BlockInit.BLOCKS.register(eventBus);
+        EffectsInit.ENCHANTMENTS.register(eventBus);
 
         MinecraftForge.EVENT_BUS.register(this);
         MinecraftForge.EVENT_BUS.addListener(EventPriority.HIGH, GenerateOres::addOres);

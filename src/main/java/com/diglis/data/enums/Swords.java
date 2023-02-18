@@ -1,4 +1,4 @@
-package com.diglis.data.item_enums;
+package com.diglis.data.enums;
 
 import com.diglis.eldencraft.EldenCraft;
 import com.diglis.eldencraft.item.pickaxes.SteelPickaxe;
@@ -260,7 +260,7 @@ public enum Swords {
             //Heals player if they have a piece of armor with feather falling or projectile protection
             Iterable<ItemStack> slots = player.getArmorSlots();
             slots.forEach(armor -> {
-                /* If player was last damaged by gravity, heal 0.5h/t.
+                /* If player was last damaged by gravity, heal 0.5h/t. (h being hearts)
                  * Also, it only works if player was last damaged by another fall, just for balancing reasons
                  */
                 Map<Enchantment, Integer> enchantments = EnchantmentHelper.getEnchantments(armor);

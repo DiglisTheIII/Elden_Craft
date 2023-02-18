@@ -1,4 +1,4 @@
-package com.diglis.data.item_enums;
+package com.diglis.data.enums;
 
 import com.diglis.eldencraft.item.axes.SteelAxe;
 import com.diglis.eldencraft.item.tabs.EldenCraftTabTools;

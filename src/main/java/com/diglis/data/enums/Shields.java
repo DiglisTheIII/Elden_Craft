@@ -1,8 +1,7 @@
-package com.diglis.data.item_enums;
+package com.diglis.data.enums;
 
 import com.diglis.eldencraft.item.shields.RivetedWoodenShield;
 import com.diglis.eldencraft.item.tabs.EldenCraftTabTools;
-import com.diglis.eldencraft.item.tabs.EldenCraftTabWeapons;
 import net.minecraft.item.Item;
 import net.minecraft.item.ShieldItem;
 
