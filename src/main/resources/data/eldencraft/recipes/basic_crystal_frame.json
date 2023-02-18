@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "eldencraft:crystal_hilt"
+  },
+  "addition": {
+    "item": "eldencraft:crystal_blade"
+  },
+  "result": {
+    "item": "eldencraft:basic_crystal_frame"
+  }
+}

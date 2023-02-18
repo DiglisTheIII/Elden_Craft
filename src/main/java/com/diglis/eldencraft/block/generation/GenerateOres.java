@@ -19,13 +19,18 @@ public class GenerateOres {
         addOre(event, OreFeatureConfig.FillerBlockType.NATURAL_STONE,
                 BlockInit.CARBON_RUNOFF.get().defaultBlockState(), 20, 32, 62, 24);
 
+        addOre(event, OreFeatureConfig.FillerBlockType.NATURAL_STONE,
+                BlockInit.CRYSTAL_ORE.get().defaultBlockState(), 4, 32, 60, 20);
+
     }
 
     public static void addOre(final BiomeLoadingEvent event, RuleTest rule, BlockState state, int veinSize, int minHeight, int maxHeight, int amount) {
         event.getGeneration().addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,
                 Feature.ORE.configured(new OreFeatureConfig(rule, state, veinSize))
                         .decorated(Placement.RANGE.configured(
-                                new TopSolidRangeConfig(minHeight, 0, maxHeight))).squared().count(amount));
+                                new TopSolidRangeConfig(minHeight, 0, maxHeight)))
+                        .squared()
+                        .count(amount));
     }
 
 }

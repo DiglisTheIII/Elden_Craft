@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "eldencraft:zweihander_2"
+  },
+  "addition": {
+    "item": "eldencraft:smithing_stone_4"
+  },
+  "result": {
+    "item": "eldencraft:zweihander_3"
+  }
+}

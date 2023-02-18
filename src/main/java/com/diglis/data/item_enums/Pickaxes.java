@@ -7,6 +7,7 @@ import net.minecraft.item.Item.Properties;
 import net.minecraft.item.ItemTier;
 import net.minecraft.item.PickaxeItem;
 
+import java.util.Arrays;
 import java.util.HashSet;
 
 public enum Pickaxes {
@@ -25,9 +26,7 @@ public enum Pickaxes {
 
     public static HashSet<Pickaxes> hashSetter() {
         if(pickaxes.isEmpty()) {
-            for(Pickaxes p : Pickaxes.values()) {
-                pickaxes.add(p);
-            }
+            pickaxes.addAll(Arrays.asList(Pickaxes.values()));
         }
 
         return pickaxes;

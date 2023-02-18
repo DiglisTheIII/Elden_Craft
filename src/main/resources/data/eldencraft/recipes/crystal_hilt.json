@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ccc",
+    "lsl",
+    "lsl"
+  ],
+  "key": {
+    "s": {
+      "item": "eldencraft:reinforced_stick"
+    },
+    "l": {
+      "item": "eldencraft:leather_strips"
+    },
+    "c": {
+      "item": "eldencraft:crystal_gem"
+    }
+  },
+  "result": {
+    "item": "eldencraft:crystal_hilt",
+    "count": 1
+  }
+}

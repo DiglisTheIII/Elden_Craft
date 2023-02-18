@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "scs",
+    "scs",
+    "scs"
+  ],
+  "key": {
+    "s": {
+      "item": "eldencraft:carbon_shard"
+    },
+    "c": {
+      "item": "eldencraft:crystal_gem"
+    }
+  },
+  "result": {
+    "item": "eldencraft:crystal_blade",
+    "count": 1
+  }
+}

@@ -1,19 +1,16 @@
 package com.diglis.eldencraft.item;
 
+import com.diglis.data.item_enums.*;
 import com.diglis.data.item_enums.Items;
-import com.diglis.data.item_enums.Pickaxes;
-import com.diglis.data.item_enums.Swords;
 import com.diglis.eldencraft.EldenCraft;
-import net.minecraft.item.Item;
-import net.minecraft.item.PickaxeItem;
-import net.minecraft.item.SwordItem;
-import net.minecraft.item.TieredItem;
+import net.minecraft.item.*;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.HashSet;
 
+@SuppressWarnings({"unchecked", "unused"})
 public class ItemInit {
 
 
@@ -35,13 +32,18 @@ public class ItemInit {
     public static final RegistryObject<Item> SMITHING_STONE_7 = REGISTER_ITEM(Items.SMITHING_STONE_7);
     public static final RegistryObject<Item> SMITHING_STONE_8 = REGISTER_ITEM(Items.SMITHING_STONE_8);
     public static final RegistryObject<Item> ANCIENT_DRAGON_SMITHING_STONE = REGISTER_ITEM(Items.ANCIENT_DRAGON_SMITHING_STONE);
+    public static final RegistryObject<Item> SHATTERED_CRYSTAL = REGISTER_ITEM(Items.SHATTERED_CRYSTAL);
+    public static final RegistryObject<Item> CRYSTAL_GEM = REGISTER_ITEM(Items.CRYSTAL_GEM);
     public static final RegistryObject<Item> STEEL_HAMMER = REGISTER_ITEM(Items.STEEL_HAMMER);
     public static final RegistryObject<Item> REINFORCED_STEEL_HAMMER = REGISTER_ITEM(Items.REINFORCED_STEEL_HAMMER);
     public static final RegistryObject<Item> REINFORCED_STICK = REGISTER_ITEM(Items.REINFORCED_STICK);
     public static final RegistryObject<Item> STEEL_HILT = REGISTER_ITEM(Items.STEEL_HILT);
     public static final RegistryObject<Item> STEEL_BLADE = REGISTER_ITEM(Items.STEEL_BLADE);
+    public static final RegistryObject<Item> CRYSTAL_HILT = REGISTER_ITEM(Items.CRYSTAL_HILT);
+    public static final RegistryObject<Item> CRYSTAL_BLADE = REGISTER_ITEM(Items.CRYSTAL_BLADE);
 
-    public static final RegistryObject<Item> BASIC_STEEL_FRAME = REGISTER_ITEM(Swords.BASIC_STEEL_FRAME);
+    public static final RegistryObject<SwordItem> BASIC_STEEL_FRAME = REGISTER_ITEM(Swords.BASIC_STEEL_FRAME);
+    public static final RegistryObject<SwordItem> BASIC_CRYSTAL_FRAME = REGISTER_ITEM(Swords.BASIC_CRYSTAL_FRAME);
     public static final RegistryObject<SwordItem> BASTARD_SWORD = REGISTER_ITEM(Swords.BASTARD_SWORD);
     public static final RegistryObject<SwordItem> BASTARD_SWORD_1 = REGISTER_ITEM(Swords.BASTARD_SWORD_1);
     public static final RegistryObject<SwordItem> BASTARD_SWORD_2 = REGISTER_ITEM(Swords.BASTARD_SWORD_2);
@@ -58,8 +60,19 @@ public class ItemInit {
     public static final RegistryObject<SwordItem> SHORT_SWORD_5 = REGISTER_ITEM(Swords.SHORT_SWORD_5);
     public static final RegistryObject<SwordItem> SHORT_SWORD_6 = REGISTER_ITEM(Swords.SHORT_SWORD_6);
     public static final RegistryObject<SwordItem> SHORT_SWORD_7 = REGISTER_ITEM(Swords.SHORT_SWORD_7);
+    public static final RegistryObject<SwordItem> ZWEIHANDER = REGISTER_ITEM(Swords.ZWEIHANDER);
+    public static final RegistryObject<SwordItem> ZWEIHANDER_1 = REGISTER_ITEM(Swords.ZWEIHANDER_1);
+    public static final RegistryObject<SwordItem> ZWEIHANDER_2 = REGISTER_ITEM(Swords.ZWEIHANDER_2);
+    public static final RegistryObject<SwordItem> ZWEIHANDER_3 = REGISTER_ITEM(Swords.ZWEIHANDER_3);
+    public static final RegistryObject<SwordItem> ZWEIHANDER_4 = REGISTER_ITEM(Swords.ZWEIHANDER_4);
+    public static final RegistryObject<SwordItem> ZWEIHANDER_5 = REGISTER_ITEM(Swords.ZWEIHANDER_5);
+    public static final RegistryObject<SwordItem> ZWEIHANDER_6 = REGISTER_ITEM(Swords.ZWEIHANDER_6);
+    public static final RegistryObject<SwordItem> ZWEIHANDER_7 = REGISTER_ITEM(Swords.ZWEIHANDER_7);
     public static final RegistryObject<SwordItem> BLACK_KNIFE = REGISTER_ITEM(Swords.BLACK_KNIFE);
     public static final RegistryObject<PickaxeItem> STEEL_PICKAXE = REGISTER_ITEM(Pickaxes.STEEL_PICKAXE);
+    public static final RegistryObject<ShovelItem> STEEL_SHOVEL = REGISTER_ITEM(Shovels.STEEL_SHOVEL);
+    public static final RegistryObject<AxeItem> STEEL_AXE = REGISTER_ITEM(Axes.STEEL_AXE);
+    public static final RegistryObject<ShieldItem> RIVETED_WOODEN_SHIELD = REGISTER_ITEM(Shields.RIVETED_WOODEN_SHIELD);
 
 
     public static RegistryObject REGISTER_ITEM(Enum input) {
@@ -67,6 +80,9 @@ public class ItemInit {
         HashSet<Swords> swords = Swords.hashSetter();
         HashSet<Pickaxes> pickaxes = Pickaxes.hashSetter();
         HashSet<Items> items = Items.hashSetter();
+        HashSet<Shovels> shovels = Shovels.hashSetter();
+        HashSet<Axes> axes = Axes.hashSetter();
+        HashSet<Shields> shields = Shields.hashSetter();
 
         /* So because Enum objects are weird, this is checking if the values pulled
          * hashSetter contain the Enum value of whichever type of Item I am registering (see parameter).
@@ -76,6 +92,15 @@ public class ItemInit {
             return ITEMS.register(inputCasted.getName(), inputCasted::getItem);
         } else if(pickaxes.contains(input)) {
             Pickaxes inputCasted = (Pickaxes) input;
+            return ITEMS.register(inputCasted.getName(), inputCasted::getItem);
+        } else if(shovels.contains(input)) {
+            Shovels inputCasted = (Shovels) input;
+            return ITEMS.register(inputCasted.getName(), inputCasted::getItem);
+        } else if(axes.contains(input)) {
+            Axes inputCasted = (Axes) input;
+            return ITEMS.register(inputCasted.getName(), inputCasted::getItem);
+        } else if(shields.contains(input)) {
+            Shields inputCasted = (Shields) input;
             return ITEMS.register(inputCasted.getName(), inputCasted::getItem);
         } else if(items.contains(input)) {
             Items inputCasted = (Items) input;

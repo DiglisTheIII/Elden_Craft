@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "sis",
+    "sps",
+    "sis"
+  ],
+  "key": {
+    "p": {
+      "item": "minecraft:oak_planks"
+    },
+    "s": {
+      "item": "eldencraft:steel_chunk"
+    },
+    "i": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "result": {
+    "item": "eldencraft:riveted_wooden_shield"
+  }
+}

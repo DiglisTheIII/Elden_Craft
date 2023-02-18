@@ -4,6 +4,7 @@ import com.diglis.eldencraft.item.tabs.EldenCraftTabItems;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.Properties;
 
+import java.util.Arrays;
 import java.util.HashSet;
 
 public enum Items {
@@ -17,6 +18,8 @@ public enum Items {
     REINFORCED_STICK,
     STEEL_HILT,
     STEEL_BLADE,
+    CRYSTAL_HILT,
+    CRYSTAL_BLADE,
     SMITHING_STONE_1,
     SMITHING_STONE_2,
     SMITHING_STONE_3,
@@ -25,7 +28,9 @@ public enum Items {
     SMITHING_STONE_6,
     SMITHING_STONE_7,
     SMITHING_STONE_8,
-    ANCIENT_DRAGON_SMITHING_STONE;
+    ANCIENT_DRAGON_SMITHING_STONE,
+    SHATTERED_CRYSTAL,
+    CRYSTAL_GEM;
 
     static HashSet<Items> items = new HashSet<Items>();
 
@@ -45,11 +50,15 @@ public enum Items {
             case SMITHING_STONE_7:
             case SMITHING_STONE_8:
             case ANCIENT_DRAGON_SMITHING_STONE:
+            case SHATTERED_CRYSTAL:
+            case CRYSTAL_GEM:
             case STEEL_HAMMER:
             case REINFORCED_STEEL_HAMMER:
             case REINFORCED_STICK:
             case STEEL_HILT:
             case STEEL_BLADE:
+            case CRYSTAL_HILT:
+            case CRYSTAL_BLADE:
                 return new Item(tab);
             default:
                 return null;
@@ -58,9 +67,7 @@ public enum Items {
 
     public static HashSet<Items> hashSetter() {
         if(items.isEmpty()) {
-            for(Items i : Items.values()) {
-                items.add(i);
-            }
+            items.addAll(Arrays.asList(Items.values()));
         }
         return items;
     }
@@ -93,6 +100,10 @@ public enum Items {
                 return "smithing_stone_8";
             case ANCIENT_DRAGON_SMITHING_STONE:
                 return "ancient_dragon_smithing_stone";
+            case SHATTERED_CRYSTAL:
+                return "shattered_crystal";
+            case CRYSTAL_GEM:
+                return "crystal_gem";
             case STEEL_HAMMER:
                 return "steel_hammer";
             case REINFORCED_STEEL_HAMMER:
@@ -103,6 +114,10 @@ public enum Items {
                 return "steel_hilt";
             case STEEL_BLADE:
                 return "steel_blade";
+            case CRYSTAL_HILT:
+                return "crystal_hilt";
+            case CRYSTAL_BLADE:
+                return "crystal_blade";
             default:
                 return null;
         }

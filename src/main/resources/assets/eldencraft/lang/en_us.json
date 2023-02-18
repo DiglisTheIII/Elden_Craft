@@ -18,7 +18,10 @@
   "item.eldencraft.reinforced_stick": "Reinforced Stick",
   "item.eldencraft.steel_hilt": "Steel Hilt",
   "item.eldencraft.steel_blade": "Steel Blade",
+  "item.eldencraft.crystal_hilt": "Crystal Hilt",
+  "item.eldencraft.crystal_blade": "Crystal Blade",
   "item.eldencraft.basic_steel_frame": "Basic Steel Frame",
+  "item.eldencraft.basic_crystal_frame": "Basic Crystal Frame",
   "item.eldencraft.bastard_sword": "Bastard Sword",
   "item.eldencraft.bastard_sword_1": "Bastard Sword +1",
   "item.eldencraft.bastard_sword_2": "Bastard Sword +2",
@@ -35,16 +38,31 @@
   "item.eldencraft.short_sword_5": "Shortsword +5",
   "item.eldencraft.short_sword_6": "Shortsword +6",
   "item.eldencraft.short_sword_7": "Shortsword +7",
+  "item.eldencraft.zweihander": "Zweihander",
+  "item.eldencraft.zweihander_1": "Zweihander +1",
+  "item.eldencraft.zweihander_2": "Zweihander +2",
+  "item.eldencraft.zweihander_3": "Zweihander +3",
+  "item.eldencraft.zweihander_4": "Zweihander +4",
+  "item.eldencraft.zweihander_5": "Zweihander +5",
+  "item.eldencraft.zweihander_6": "Zweihander +6",
+  "item.eldencraft.zweihander_7": "Zweihander +7",
   "item.eldencraft.black_knife": "Black Knife",
   "item.eldencraft.steel_pickaxe": "Steel Pickaxe",
+  "item.eldencraft.steel_shovel": "Steel Shovel",
+  "item.eldencraft.steel_axe": "Steel Axe",
+  "item.eldencraft.riveted_wooden_shield": "Riveted Wooden Shield",
+  "item.eldencraft.shattered_crystal": "Shattered Crystal",
+  "item.eldencraft.crystal_gem": "Crystal Gem",
 
   "block.eldencraft.carbon_runoff": "Carbon Runoff",
   "block.eldencraft.steel_block": "Steel Block",
   "block.eldencraft.natural_geode": "Natural Geode",
+  "block.eldencraft.crystal_ore": "Crystal Ore",
 
   "itemGroup.elden_craft_weapons": "Elden Craft: Weapons",
   "itemGroup.elden_craft_tools": "Elden Craft: Tools",
   "itemGroup.elden_craft_items": "Elden Craft: Misc",
-  "itemGroup.elden_craft_blocks": "Elden Craft: Blocks"
+  "itemGroup.elden_craft_blocks": "Elden Craft: Blocks",
+  "itemGroup.elden_craft_variants": "Elden Craft: Weapon Variants"
 
 }
