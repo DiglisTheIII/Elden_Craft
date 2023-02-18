@@ -6,21 +6,26 @@ import com.diglis.eldencraft.item.tabs.EldenCraftTabVariants;
 import com.diglis.eldencraft.item.tabs.EldenCraftTabWeapons;
 import com.diglis.eldencraft.weapons.*;
 import net.minecraft.client.Minecraft;
+import net.minecraft.enchantment.Enchantment;
+import net.minecraft.enchantment.EnchantmentHelper;
+import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.Properties;
+import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemTier;
 import net.minecraft.item.SwordItem;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Effects;
+import net.minecraft.util.DamageSource;
 import net.minecraft.util.Hand;
 import net.minecraft.world.World;
+import net.minecraftforge.client.event.InputEvent;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
-import java.util.Arrays;
-import java.util.HashSet;
+import java.util.*;
 
 @Mod.EventBusSubscriber(modid = EldenCraft.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public enum Swords {
@@ -193,9 +198,24 @@ public enum Swords {
     }
 
     @SubscribeEvent
+    public static void onClickEvent(InputEvent.ClickInputEvent event) {
+        PlayerEntity player = Minecraft.getInstance().player;
+        assert player != null;
+        Collection<EffectInstance> effectsOnPlayer = player.getActiveEffects();
+        if(player.getItemInHand(Hand.MAIN_HAND).getItem() instanceof BlackKnife) {
+            if(event.getKeyBinding().matchesMouse(1) && player.isOnGround() && !player.isHurt()) {
+                player.addEffect(new EffectInstance(Effects.LEVITATION, 180, 2));
+            } else if(event.getKeyBinding().matchesMouse(1) && !player.isOnGround()) {
+                player.removeEffect(Effects.LEVITATION);
+            }
+        }
+    }
+
+    @SubscribeEvent
     public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
         PlayerEntity player = event.player;
         World world = Minecraft.getInstance().level;
+        Collection<EffectInstance> effectsOnPlayer = player.getActiveEffects();
 
         EffectInstance[] effects = {
                 new EffectInstance(Effects.DAMAGE_BOOST),
@@ -231,32 +251,25 @@ public enum Swords {
                 player.addEffect(effects[4]);
             }
         } else if(player.getItemInHand(Hand.MAIN_HAND).getItem() instanceof BlackKnife) {
-            //When player is at >= half health, the user will be invisible.
-            if(player.getHealth() >= (player.getHealth() / 2)) {
-                player.addEffect(effects[5]);
-            } else {
-                player.removeEffect(effects[5].getEffect());
-            }
+            //Heals player if they have a piece of armor with feather falling or projectile protection
+            Iterable<ItemStack> slots = player.getArmorSlots();
+            slots.forEach(armor -> {
+                /* If player was last damaged by gravity, heal 0.5h/t.
+                 * Also, it only works if player was last damaged by another fall, just for balancing reasons
+                 */
+                Map<Enchantment, Integer> enchantments = EnchantmentHelper.getEnchantments(armor);
+                boolean isValidEnchant = enchantments.containsKey(Enchantments.FALL_PROTECTION) || enchantments.containsKey(Enchantments.PROJECTILE_PROTECTION);
+                boolean didFallLast = Objects.equals(player.getLastDamageSource(), DamageSource.FALL);
+                if(isValidEnchant && didFallLast) {
+                    player.heal(0.5f);
+                }
+            });
         } else if(player.getItemInHand(Hand.MAIN_HAND).getItem() instanceof Zweihander) {
             player.addEffect(effects[6]);
         } else if(player.getItemInHand(Hand.MAIN_HAND).isEmpty()) {
-            /*
-             * Loops through all handslots to check if player is holding another Elden Craft weapon.
-             * This should ensure that no effect incompatibilities will cause any issues.
-             * It is sort of like a safer flush of the effects the weapons imposed on the player.
-             */
-            player.getHandSlots().forEach(sword -> {
-                int i = weaponsList.length - 1;
-                while(sword.getItem().toString().equals(weaponsList[i]) && i != 0) {
-                    player.removeEffect(Effects.DAMAGE_BOOST);
-                    player.removeEffect(Effects.MOVEMENT_SPEED);
-                    player.removeEffect(Effects.ABSORPTION);
-                    player.removeEffect(Effects.DIG_SPEED);
-                    player.removeEffect(Effects.MOVEMENT_SLOWDOWN);
-                    i--;
-                }
-            });
-            player.removeEffect(Effects.INVISIBILITY);
+            for(EffectInstance ei : effectsOnPlayer) {
+                player.removeEffect(ei.getEffect());
+            }
         }
     }
 }
