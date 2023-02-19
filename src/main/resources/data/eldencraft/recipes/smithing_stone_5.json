@@ -1,23 +1,12 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "did",
-    "isi",
-    "did"
-  ],
-  "key": {
-    "i": {
-      "item": "eldencraft:steel_ingot"
-    },
-    "s": {
-      "item": "eldencraft:smithing_stone_4"
-    },
-    "d": {
-      "item": "minecraft:diamond"
-    }
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "eldencraft:smithing_stone_4"
+  },
+  "addition": {
+    "item": "eldencraft:smithing_stone_4"
   },
   "result": {
-    "item": "eldencraft:smithing_stone_5",
-    "count": 1
+    "item": "eldencraft:smithing_stone_5"
   }
 }

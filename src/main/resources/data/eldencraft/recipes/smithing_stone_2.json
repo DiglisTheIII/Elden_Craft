@@ -1,23 +1,12 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "rir",
-    "isi",
-    "rir"
-  ],
-  "key": {
-    "i": {
-      "item": "minecraft:iron_ingot"
-    },
-    "s": {
-      "item": "eldencraft:smithing_stone_1"
-    },
-    "r": {
-      "item": "minecraft:redstone"
-    }
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "eldencraft:smithing_stone_1"
+  },
+  "addition": {
+    "item": "eldencraft:smithing_stone_1"
   },
   "result": {
-    "item": "eldencraft:smithing_stone_2",
-    "count": 1
+    "item": "eldencraft:smithing_stone_2"
   }
 }

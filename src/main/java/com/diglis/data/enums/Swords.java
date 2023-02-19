@@ -1,6 +1,6 @@
 package com.diglis.data.enums;
-
 import com.diglis.eldencraft.EldenCraft;
+import com.diglis.eldencraft.ItemInit;
 import com.diglis.eldencraft.effects.EffectsInit;
 import com.diglis.eldencraft.item.pickaxes.SteelPickaxe;
 import com.diglis.eldencraft.item.tabs.EldenCraftTabVariants;
@@ -25,13 +25,10 @@ import net.minecraftforge.client.event.InputEvent;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-
 import java.util.*;
-
 @Mod.EventBusSubscriber(modid = EldenCraft.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
 @SuppressWarnings("unused")
 public enum Swords {
-
     BASIC_STEEL_FRAME,
     BASTARD_SWORD,
     BASTARD_SWORD_1,
@@ -62,7 +59,6 @@ public enum Swords {
     BLACK_KNIFE;
     static final HashSet<Swords> swords = new HashSet<>();
     static final PlayerEntity player = Minecraft.getInstance().player;
-
     public SwordItem getItem() {
         Properties tab = new Item.Properties().tab(EldenCraftTabWeapons.ELDEN_CRAFT_TAB_WEAPONS);
         Properties variants = new Item.Properties().tab(EldenCraftTabVariants.ELDEN_CRAFT_TAB_VARIANTS);
@@ -127,7 +123,6 @@ public enum Swords {
                 return null;
         }
     }
-
     public String getName() {
         switch(this) {
             case BASTARD_SWORD:
@@ -190,7 +185,6 @@ public enum Swords {
                 return null;
         }
     }
-
     /*
      *  Sets all HashSets of type Swords (this), then returns
      *  a HashSet which can be assigned in any one of the Init classes. All enums have a copy of this
@@ -200,10 +194,8 @@ public enum Swords {
         if(swords.isEmpty()) {
             swords.addAll(Arrays.asList(Swords.values()));
         }
-
         return swords;
     }
-
     @SubscribeEvent
     public static void onClickEvent(InputEvent.ClickInputEvent event) {
         PlayerEntity player = Minecraft.getInstance().player;
@@ -216,13 +208,11 @@ public enum Swords {
             }
         }
     }
-
     @SubscribeEvent
     public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
         PlayerEntity player = event.player;
         World world = Minecraft.getInstance().level;
         Collection<EffectInstance> effectsOnPlayer = player.getActiveEffects();
-
         EffectInstance[] effects = {
                 new EffectInstance(Effects.DAMAGE_BOOST),
                 new EffectInstance(Effects.MOVEMENT_SPEED),
@@ -232,7 +222,6 @@ public enum Swords {
                 new EffectInstance(Effects.INVISIBILITY, 180, 10),
                 new EffectInstance(Effects.MOVEMENT_SLOWDOWN, 0, 2)
         };
-
         player.getItemInHand(Hand.MAIN_HAND);
         if(player.getItemInHand(Hand.MAIN_HAND).getItem() instanceof BastardSword && player.getHealth() == player.getMaxHealth()) {
             //Apply strength if user is holding the weapon and is at full health.

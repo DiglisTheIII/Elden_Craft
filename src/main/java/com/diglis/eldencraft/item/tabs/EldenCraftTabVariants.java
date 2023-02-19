@@ -1,6 +1,7 @@
 package com.diglis.eldencraft.item.tabs;
 
-import com.diglis.eldencraft.item.ItemInit;
+import com.diglis.eldencraft.ItemInit;
+
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 
