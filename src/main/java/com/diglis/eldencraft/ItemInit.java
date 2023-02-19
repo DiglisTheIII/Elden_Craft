@@ -1,8 +1,8 @@
-package com.diglis.eldencraft.item;
+package com.diglis.eldencraft;
 
 import com.diglis.data.enums.*;
 import com.diglis.data.enums.Items;
-import com.diglis.eldencraft.EldenCraft;
+
 import net.minecraft.item.*;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;

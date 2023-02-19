@@ -1,6 +1,10 @@
 package com.diglis.eldencraft.armor.chestplates;
 
+import javax.annotation.Nullable;
+
 import com.diglis.eldencraft.effects.EffectsInit;
+
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.ArmorItem;
