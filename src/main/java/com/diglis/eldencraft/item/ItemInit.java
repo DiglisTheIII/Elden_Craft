@@ -19,30 +19,30 @@ public class ItemInit {
             DeferredRegister.create(ForgeRegistries.ITEMS, EldenCraft.MOD_ID);
 
     //Big ass block of code!
-    public static final RegistryObject<Item> STEEL_INGOT = REGISTER_ITEM(Items.STEEL_INGOT);
-    public static final RegistryObject<Item> STEEL_CHUNK = REGISTER_ITEM(Items.STEEL_CHUNK);
-    public static final RegistryObject<Item> CARBON_SHARD = REGISTER_ITEM(Items.CARBON_SHARD);
-    public static final RegistryObject<Item> LEATHER_STRIPS = REGISTER_ITEM(Items.LEATHER_STRIPS);
-    public static final RegistryObject<Item> SMITHING_STONE_1 = REGISTER_ITEM(Items.SMITHING_STONE_1);
-    public static final RegistryObject<Item> SMITHING_STONE_2 = REGISTER_ITEM(Items.SMITHING_STONE_2);
-    public static final RegistryObject<Item> SMITHING_STONE_3 = REGISTER_ITEM(Items.SMITHING_STONE_3);
-    public static final RegistryObject<Item> SMITHING_STONE_4 = REGISTER_ITEM(Items.SMITHING_STONE_4);
-    public static final RegistryObject<Item> SMITHING_STONE_5 = REGISTER_ITEM(Items.SMITHING_STONE_5);
-    public static final RegistryObject<Item> SMITHING_STONE_6 = REGISTER_ITEM(Items.SMITHING_STONE_6);
-    public static final RegistryObject<Item> SMITHING_STONE_7 = REGISTER_ITEM(Items.SMITHING_STONE_7);
-    public static final RegistryObject<Item> SMITHING_STONE_8 = REGISTER_ITEM(Items.SMITHING_STONE_8);
-    public static final RegistryObject<Item> ANCIENT_DRAGON_SMITHING_STONE = REGISTER_ITEM(Items.ANCIENT_DRAGON_SMITHING_STONE);
-    public static final RegistryObject<Item> SOMBER_SMITHING_STONE_1 = REGISTER_ITEM(Items.SOMBER_SMITHING_STONE_1);
-    public static final RegistryObject<Item> SOMBER_SMITHING_STONE_2 = REGISTER_ITEM(Items.SOMBER_SMITHING_STONE_2);
-    public static final RegistryObject<Item> SOMBER_SMITHING_STONE_3 = REGISTER_ITEM(Items.SOMBER_SMITHING_STONE_3);
-    public static final RegistryObject<Item> SOMBER_SMITHING_STONE_4 = REGISTER_ITEM(Items.SOMBER_SMITHING_STONE_4);
-    public static final RegistryObject<Item> SOMBER_SMITHING_STONE_5 = REGISTER_ITEM(Items.SOMBER_SMITHING_STONE_5);
-    public static final RegistryObject<Item> SOMBER_SMITHING_STONE_6 = REGISTER_ITEM(Items.SOMBER_SMITHING_STONE_6);
-    public static final RegistryObject<Item> SHATTERED_CRYSTAL = REGISTER_ITEM(Items.SHATTERED_CRYSTAL);
-    public static final RegistryObject<Item> CRYSTAL_GEM = REGISTER_ITEM(Items.CRYSTAL_GEM);
+    public static final RegistryObject<Item> STEEL_INGOT = REGISTER_ITEM(Materials.STEEL_INGOT);
+    public static final RegistryObject<Item> STEEL_CHUNK = REGISTER_ITEM(Materials.STEEL_CHUNK);
+    public static final RegistryObject<Item> CARBON_SHARD = REGISTER_ITEM(Materials.CARBON_SHARD);
+    public static final RegistryObject<Item> LEATHER_STRIPS = REGISTER_ITEM(Materials.LEATHER_STRIPS);
+    public static final RegistryObject<Item> SMITHING_STONE_1 = REGISTER_ITEM(Materials.SMITHING_STONE_1);
+    public static final RegistryObject<Item> SMITHING_STONE_2 = REGISTER_ITEM(Materials.SMITHING_STONE_2);
+    public static final RegistryObject<Item> SMITHING_STONE_3 = REGISTER_ITEM(Materials.SMITHING_STONE_3);
+    public static final RegistryObject<Item> SMITHING_STONE_4 = REGISTER_ITEM(Materials.SMITHING_STONE_4);
+    public static final RegistryObject<Item> SMITHING_STONE_5 = REGISTER_ITEM(Materials.SMITHING_STONE_5);
+    public static final RegistryObject<Item> SMITHING_STONE_6 = REGISTER_ITEM(Materials.SMITHING_STONE_6);
+    public static final RegistryObject<Item> SMITHING_STONE_7 = REGISTER_ITEM(Materials.SMITHING_STONE_7);
+    public static final RegistryObject<Item> SMITHING_STONE_8 = REGISTER_ITEM(Materials.SMITHING_STONE_8);
+    public static final RegistryObject<Item> ANCIENT_DRAGON_SMITHING_STONE = REGISTER_ITEM(Materials.ANCIENT_DRAGON_SMITHING_STONE);
+    public static final RegistryObject<Item> SOMBER_SMITHING_STONE_1 = REGISTER_ITEM(Materials.SOMBER_SMITHING_STONE_1);
+    public static final RegistryObject<Item> SOMBER_SMITHING_STONE_2 = REGISTER_ITEM(Materials.SOMBER_SMITHING_STONE_2);
+    public static final RegistryObject<Item> SOMBER_SMITHING_STONE_3 = REGISTER_ITEM(Materials.SOMBER_SMITHING_STONE_3);
+    public static final RegistryObject<Item> SOMBER_SMITHING_STONE_4 = REGISTER_ITEM(Materials.SOMBER_SMITHING_STONE_4);
+    public static final RegistryObject<Item> SOMBER_SMITHING_STONE_5 = REGISTER_ITEM(Materials.SOMBER_SMITHING_STONE_5);
+    public static final RegistryObject<Item> SOMBER_SMITHING_STONE_6 = REGISTER_ITEM(Materials.SOMBER_SMITHING_STONE_6);
+    public static final RegistryObject<Item> SHATTERED_CRYSTAL = REGISTER_ITEM(Materials.SHATTERED_CRYSTAL);
+    public static final RegistryObject<Item> CRYSTAL_GEM = REGISTER_ITEM(Materials.CRYSTAL_GEM);
     public static final RegistryObject<Item> STEEL_HAMMER = REGISTER_ITEM(Items.STEEL_HAMMER);
     public static final RegistryObject<Item> REINFORCED_STEEL_HAMMER = REGISTER_ITEM(Items.REINFORCED_STEEL_HAMMER);
-    public static final RegistryObject<Item> REINFORCED_STICK = REGISTER_ITEM(Items.REINFORCED_STICK);
+    public static final RegistryObject<Item> REINFORCED_STICK = REGISTER_ITEM(Materials.REINFORCED_STICK);
     public static final RegistryObject<Item> STEEL_HILT = REGISTER_ITEM(Items.STEEL_HILT);
     public static final RegistryObject<Item> STEEL_BLADE = REGISTER_ITEM(Items.STEEL_BLADE);
     public static final RegistryObject<Item> CRYSTAL_HILT = REGISTER_ITEM(Items.CRYSTAL_HILT);
@@ -101,6 +101,7 @@ public class ItemInit {
         HashSet<Shovels> shovels = Shovels.hashSetter();
         HashSet<Axes> axes = Axes.hashSetter();
         HashSet<Shields> shields = Shields.hashSetter();
+        HashSet<Materials> materials = Materials.hashSetter();
 
         /* So because Enum objects are weird, this is checking if the values pulled
          * hashSetter contain the Enum value of whichever type of Item I am registering (see parameter).
@@ -125,6 +126,9 @@ public class ItemInit {
             return ITEMS.register(inputCasted.getName(), inputCasted::getItem);
         } else if(items.contains(input)) {
             Items inputCasted = (Items) input;
+            return ITEMS.register(inputCasted.getName(), inputCasted::getItem);
+        } else if(materials.contains(input)) {
+            Materials inputCasted = (Materials) input;
             return ITEMS.register(inputCasted.getName(), inputCasted::getItem);
         }
 

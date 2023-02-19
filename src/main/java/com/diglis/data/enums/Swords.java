@@ -1,6 +1,7 @@
 package com.diglis.data.enums;
 
 import com.diglis.eldencraft.EldenCraft;
+import com.diglis.eldencraft.effects.EffectsInit;
 import com.diglis.eldencraft.item.pickaxes.SteelPickaxe;
 import com.diglis.eldencraft.item.tabs.EldenCraftTabVariants;
 import com.diglis.eldencraft.item.tabs.EldenCraftTabWeapons;
@@ -192,7 +193,7 @@ public enum Swords {
 
     /*
      *  Sets all HashSets of type Swords (this), then returns
-     *  a HashSet which can be assigned elsewhere. All enums have a copy of this
+     *  a HashSet which can be assigned in any one of the Init classes. All enums have a copy of this
      *  method, so I will keep this description here.
      */
     public static HashSet<Swords> hashSetter() {
@@ -209,7 +210,7 @@ public enum Swords {
         assert player != null;
         if(player.getItemInHand(Hand.MAIN_HAND).getItem() instanceof BlackKnife) {
             if(event.getKeyBinding().matchesMouse(1) && player.isOnGround() && !player.isHurt()) {
-                player.addEffect(new EffectInstance(Effects.LEVITATION, 180, 2));
+                player.addEffect(new EffectInstance(Effects.LEVITATION, 180, 3));
             } else if(event.getKeyBinding().matchesMouse(1) && !player.isOnGround()) {
                 player.removeEffect(Effects.LEVITATION);
             }
@@ -232,13 +233,6 @@ public enum Swords {
                 new EffectInstance(Effects.MOVEMENT_SLOWDOWN, 0, 2)
         };
 
-        String[] weaponsList = {
-                "bastard_sword",
-                "short_sword",
-                "black_knife",
-                "steel_pickaxe"
-        };
-
         player.getItemInHand(Hand.MAIN_HAND);
         if(player.getItemInHand(Hand.MAIN_HAND).getItem() instanceof BastardSword && player.getHealth() == player.getMaxHealth()) {
             //Apply strength if user is holding the weapon and is at full health.
@@ -255,16 +249,16 @@ public enum Swords {
                 player.addEffect(effects[3]);
                 player.addEffect(effects[4]);
             }
-            //TODO Textures for Somber Smithing Stones
         } else if(player.getItemInHand(Hand.MAIN_HAND).getItem() instanceof BlackKnife) {
-            //Heals player if they have a piece of armor with feather falling or projectile protection
+            //Heals player if they have a piece of armor with death aura
             Iterable<ItemStack> slots = player.getArmorSlots();
             slots.forEach(armor -> {
                 /* If player was last damaged by gravity, heal 0.5h/t. (h being hearts)
                  * Also, it only works if player was last damaged by another fall, just for balancing reasons
                  */
                 Map<Enchantment, Integer> enchantments = EnchantmentHelper.getEnchantments(armor);
-                boolean isValidEnchant = enchantments.containsKey(Enchantments.FALL_PROTECTION) || enchantments.containsKey(Enchantments.PROJECTILE_PROTECTION);
+                assert EffectsInit.DEATH_AURA != null;
+                boolean isValidEnchant = enchantments.containsKey(EffectsInit.DEATH_AURA.get());
                 boolean didFallLast = Objects.equals(player.getLastDamageSource(), DamageSource.FALL);
                 if(isValidEnchant && didFallLast) {
                     player.heal(0.5f);
