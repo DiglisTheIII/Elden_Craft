@@ -15,7 +15,7 @@ import java.util.HashSet;
 
 public enum Armor {
 
-    //comment for testing, fuck my ass mason
+    //comment for testing, tazz eat my shit
 
     MALIKETHS_HELM,
     MALIKETHS_ARMOR,
