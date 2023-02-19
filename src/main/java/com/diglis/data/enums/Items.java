@@ -44,7 +44,7 @@ public enum Items {
                 return new Item(tab);
             case TAZZ:
             return new Tazz(tab.food(new Food.Builder().effect(
-                    () -> new EffectInstance(Effects.HARM, 180, 100), 100f)
+                    () -> new EffectInstance(Effects.HARM, 180, 1), 100f)
                     .fast()
                     .build()));
             default:
@@ -86,7 +86,7 @@ public enum Items {
         if(event.getKeyBinding().matchesMouse(0) && player.isHolding(ItemInit.TAZZ.get()) && !hasLevitation) {
             assert world != null;
             world.explode(player, player.getX(), player.getY(), player.getZ(), 5.5f, Explosion.Mode.DESTROY);
-            player.knockback(5f, player.getX() - player.getX(), player.getZ() - player.getZ());
+            player.knockback(5f, player.getX() + player.getX(), player.getZ() + player.getZ());
         } else if(event.getKeyBinding().matchesMouse(0) && player.isHolding(ItemInit.TAZZ.get()) && hasLevitation) {
             player.removeEffect(Effects.LEVITATION);
         }
