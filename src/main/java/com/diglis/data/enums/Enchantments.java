@@ -1,15 +1,9 @@
 package com.diglis.data.enums;
 
 import com.diglis.eldencraft.effects.enchantments.DeathAura;
-import com.diglis.eldencraft.item.pickaxes.SteelPickaxe;
-import com.diglis.eldencraft.item.tabs.EldenCraftTabTools;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentType;
 import net.minecraft.inventory.EquipmentSlotType;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemTier;
-import net.minecraft.item.PickaxeItem;
-import net.minecraftforge.registries.IForgeRegistryEntry;
 
 import java.util.Arrays;
 import java.util.HashSet;

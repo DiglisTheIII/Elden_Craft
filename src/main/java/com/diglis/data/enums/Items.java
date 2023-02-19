@@ -9,6 +9,8 @@ import java.util.HashSet;
 
 public enum Items {
 
+    //cock
+
     STEEL_HAMMER,
     REINFORCED_STEEL_HAMMER,
     STEEL_HILT,
