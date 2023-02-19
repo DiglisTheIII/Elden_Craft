@@ -76,7 +76,7 @@ public enum Armor {
                 return "malikeths_boots_e";
             default:
                 return null;
-        }
+        } //fine
     }
 
 }
