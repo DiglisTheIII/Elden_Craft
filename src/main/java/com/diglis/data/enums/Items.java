@@ -1,23 +1,34 @@
 package com.diglis.data.enums;
-
-import com.diglis.eldencraft.item.tabs.EldenCraftTabItems;
-import net.minecraft.item.Item;
-import net.minecraft.item.Item.Properties;
-
 import java.util.Arrays;
 import java.util.HashSet;
 
+import com.diglis.eldencraft.EldenCraft;
+import com.diglis.eldencraft.Tazz;
+import com.diglis.eldencraft.item.ItemInit;
+import com.diglis.eldencraft.item.tabs.EldenCraftTabItems;
+//hi i hate you
+import net.minecraft.client.Minecraft;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.Food;
+import net.minecraft.item.Item;
+import net.minecraft.item.Item.Properties;
+import net.minecraft.potion.EffectInstance;
+import net.minecraft.potion.Effects;
+import net.minecraft.world.Explosion;
+import net.minecraft.world.World;
+import net.minecraftforge.client.event.InputEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.common.Mod;
+@Mod.EventBusSubscriber(modid = EldenCraft.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public enum Items {
-
     STEEL_HAMMER,
     REINFORCED_STEEL_HAMMER,
     STEEL_HILT,
     STEEL_BLADE,
     CRYSTAL_HILT,
+    TAZZ,
     CRYSTAL_BLADE;
-
     static HashSet<Items> items = new HashSet<Items>();
-
     public Item getItem() {
         Properties tab = new Item.Properties().tab(EldenCraftTabItems.ELDEN_CRAFT_TAB_ITEMS);
         switch(this) {
@@ -28,18 +39,21 @@ public enum Items {
             case CRYSTAL_HILT:
             case CRYSTAL_BLADE:
                 return new Item(tab);
+            case TAZZ:
+            return new Tazz(tab.food(new Food.Builder().effect(
+                    () -> new EffectInstance(Effects.HUNGER, 180, 6), 100f)
+                    .fast()
+                    .build()));
             default:
                 return null;
         }
     }
-
     public static HashSet<Items> hashSetter() {
         if(items.isEmpty()) {
             items.addAll(Arrays.asList(Items.values()));
         }
         return items;
     }
-
     public String getName() {
         switch(this) {
             case STEEL_HAMMER:
@@ -54,9 +68,25 @@ public enum Items {
                 return "crystal_hilt";
             case CRYSTAL_BLADE:
                 return "crystal_blade";
+            case TAZZ:
+                return "tazz";
             default:
                 return null;
         }
     }
 
+    @SubscribeEvent
+    public static void onClickEvent(InputEvent.ClickInputEvent event) {
+        PlayerEntity player = Minecraft.getInstance().player;
+        World world = Minecraft.getInstance().level;
+        assert player != null;
+        boolean hasLevitation = player.hasEffect(Effects.LEVITATION);
+        if(event.getKeyBinding().matchesMouse(0) && player.isHolding(ItemInit.TAZZ.get()) && !hasLevitation) {
+            assert world != null;
+            world.explode(player, player.getX(), player.getY(), player.getZ(), 5.5f, Explosion.Mode.DESTROY);
+            player.knockback(5f, player.getLookAngle().x() + player.getLookAngle().x(), player.getLookAngle().z() + player.getLookAngle().z());
+        } else if(event.getKeyBinding().matchesMouse(0) && player.isHolding(ItemInit.TAZZ.get()) && hasLevitation) {
+            player.removeEffect(Effects.LEVITATION);
+        }
+    }
 }

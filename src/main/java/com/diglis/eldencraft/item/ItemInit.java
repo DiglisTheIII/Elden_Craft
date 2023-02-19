@@ -47,6 +47,7 @@ public class ItemInit {
     public static final RegistryObject<Item> STEEL_BLADE = REGISTER_ITEM(Items.STEEL_BLADE);
     public static final RegistryObject<Item> CRYSTAL_HILT = REGISTER_ITEM(Items.CRYSTAL_HILT);
     public static final RegistryObject<Item> CRYSTAL_BLADE = REGISTER_ITEM(Items.CRYSTAL_BLADE);
+    public static final RegistryObject<Item> TAZZ = REGISTER_ITEM(Items.TAZZ);
 
     public static final RegistryObject<SwordItem> BASIC_STEEL_FRAME = REGISTER_ITEM(Swords.BASIC_STEEL_FRAME);
     public static final RegistryObject<SwordItem> BASIC_CRYSTAL_FRAME = REGISTER_ITEM(Swords.BASIC_CRYSTAL_FRAME);
