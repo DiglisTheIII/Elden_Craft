@@ -10,7 +10,6 @@ import net.minecraft.item.Item;
 import java.util.Arrays;
 import java.util.HashSet;
 public enum Armor {
-    //cock
     MALIKETHS_HELM,
     MALIKETHS_ARMOR,
     MALIKETHS_GREAVES,

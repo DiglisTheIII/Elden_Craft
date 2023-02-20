@@ -17,7 +17,7 @@ public enum ArmorMaterials implements IArmorMaterial {
                 () -> Ingredient.of(ItemInit.CRYSTAL_GEM.get())),
     DARK("dark", 10, new int[] {9, 14, 13, 8}, 12, 
             SoundEvents.ARMOR_EQUIP_ELYTRA, 9.0f, 5.0f,
-                () -> Ingredient.of(ItemInit.ANCIENT_DRAGON_SMITHING_STONE.get()));
+                () -> Ingredient.of(ItemInit.DEATH_BOUND_CORE.get()));
     private static final int[] MAX_DAMAGE_ARRAY = new int[] {13, 15, 16, 11};
     private final String name;
     private final int maxDamageFactor;

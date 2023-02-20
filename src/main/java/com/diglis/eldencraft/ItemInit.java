@@ -1,23 +1,16 @@
 package com.diglis.eldencraft;
-
 import com.diglis.data.enums.*;
 import com.diglis.data.enums.Items;
-
 import net.minecraft.item.*;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
-
 import java.util.HashSet;
-
 @SuppressWarnings({"unchecked", "unused"})
 public class ItemInit {
-
-
     //Blah blah boring boilerplate.
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, EldenCraft.MOD_ID);
-
     //Big ass block of code!
     public static final RegistryObject<Item> STEEL_INGOT = REGISTER_ITEM(Materials.STEEL_INGOT);
     public static final RegistryObject<Item> STEEL_CHUNK = REGISTER_ITEM(Materials.STEEL_CHUNK);
@@ -48,7 +41,10 @@ public class ItemInit {
     public static final RegistryObject<Item> CRYSTAL_HILT = REGISTER_ITEM(Items.CRYSTAL_HILT);
     public static final RegistryObject<Item> CRYSTAL_BLADE = REGISTER_ITEM(Items.CRYSTAL_BLADE);
     public static final RegistryObject<Item> TAZZ = REGISTER_ITEM(Items.TAZZ);
-
+    public static final RegistryObject<Item> DARK_ESSENCE = REGISTER_ITEM(Materials.DARK_ESSENCE);
+    public static final RegistryObject<Item> DEATH_BOUND_CORE = REGISTER_ITEM(Materials.DEATH_BOUND_CORE);
+    public static final RegistryObject<Item> ANDEN = REGISTER_ITEM(Items.ANDEN);
+    public static final RegistryObject<Item> SAGE = REGISTER_ITEM(Items.SAGE);
     public static final RegistryObject<SwordItem> BASIC_STEEL_FRAME = REGISTER_ITEM(Swords.BASIC_STEEL_FRAME);
     public static final RegistryObject<SwordItem> BASIC_CRYSTAL_FRAME = REGISTER_ITEM(Swords.BASIC_CRYSTAL_FRAME);
     public static final RegistryObject<SwordItem> BASTARD_SWORD = REGISTER_ITEM(Swords.BASTARD_SWORD);
@@ -81,7 +77,6 @@ public class ItemInit {
     public static final RegistryObject<ShovelItem> STEEL_SHOVEL = REGISTER_ITEM(Shovels.STEEL_SHOVEL);
     public static final RegistryObject<AxeItem> STEEL_AXE = REGISTER_ITEM(Axes.STEEL_AXE);
     public static final RegistryObject<ShieldItem> RIVETED_WOODEN_SHIELD = REGISTER_ITEM(Shields.RIVETED_WOODEN_SHIELD);
-
     public static final RegistryObject<ArmorItem> MALIKETHS_HELM = REGISTER_ITEM(Armor.MALIKETHS_HELM);
     public static final RegistryObject<ArmorItem> MALIKETHS_ARMOR = REGISTER_ITEM(Armor.MALIKETHS_ARMOR);
     public static final RegistryObject<ArmorItem> MALIKETHS_GREAVES = REGISTER_ITEM(Armor.MALIKETHS_GREAVES);
@@ -90,9 +85,6 @@ public class ItemInit {
     public static final RegistryObject<ArmorItem> MALIKETHS_ARMOR_E = REGISTER_ITEM(Armor.MALIKETHS_ARMOR_E);
     public static final RegistryObject<ArmorItem> MALIKETHS_GREAVES_E = REGISTER_ITEM(Armor.MALIKETHS_GREAVES_E);
     public static final RegistryObject<ArmorItem> MALIKETHS_BOOTS_E = REGISTER_ITEM(Armor.MALIKETHS_BOOTS_E);
-
-
-
     public static RegistryObject REGISTER_ITEM(Enum input) {
         //Setting the HashSets to the Enums#hashSetter method
         HashSet<Armor> armor = Armor.hashSetter();
@@ -103,7 +95,6 @@ public class ItemInit {
         HashSet<Axes> axes = Axes.hashSetter();
         HashSet<Shields> shields = Shields.hashSetter();
         HashSet<Materials> materials = Materials.hashSetter();
-
         /* So because Enum objects are weird, this is checking if the values pulled
          * hashSetter contain the Enum value of whichever type of Item I am registering (see parameter).
          */
@@ -132,7 +123,6 @@ public class ItemInit {
             Materials inputCasted = (Materials) input;
             return ITEMS.register(inputCasted.getName(), inputCasted::getItem);
         }
-
         return null;
     }
 }

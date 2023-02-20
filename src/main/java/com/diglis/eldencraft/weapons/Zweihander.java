@@ -4,8 +4,6 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.IItemTier;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.SwordItem;
-import net.minecraft.util.DamageSource;
-
 import javax.annotation.ParametersAreNonnullByDefault;
 
 public class Zweihander extends SwordItem {
@@ -15,7 +13,6 @@ public class Zweihander extends SwordItem {
 
     @Override
     public boolean hurtEnemy(@ParametersAreNonnullByDefault ItemStack stack, LivingEntity target, LivingEntity player) {
-        DamageSource source = target.getLastDamageSource();
         target.knockback(1f, player.getX() - target.getX(), player.getZ() - target.getZ());
         return true;
     }

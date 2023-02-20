@@ -3,7 +3,6 @@ package com.diglis.eldencraft.block;
 import com.diglis.eldencraft.EldenCraft;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
-import net.minecraft.block.OreBlock;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialColor;
@@ -40,6 +39,13 @@ public class BlockInit {
 
     public static final RegistryObject<Block> STEEL_BLOCK = BLOCKS.register("steel_block",
             () -> new Block(AbstractBlock.Properties.of(Material.HEAVY_METAL, MaterialColor.COLOR_GRAY)
+                    .strength(3.8f, 4.8f)
+                    .harvestTool(ToolType.PICKAXE)
+                    .harvestLevel(2)
+                    .sound(SoundType.METAL)));
+
+        public static final RegistryObject<Block> SAGE_BLOCK = BLOCKS.register("sage_block",
+            () -> new Block(AbstractBlock.Properties.of(Material.CLAY, MaterialColor.COLOR_GRAY)
                     .strength(3.8f, 4.8f)
                     .harvestTool(ToolType.PICKAXE)
                     .harvestLevel(2)

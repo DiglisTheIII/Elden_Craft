@@ -64,53 +64,53 @@ public enum Swords {
         Properties variants = new Item.Properties().tab(EldenCraftTabVariants.ELDEN_CRAFT_TAB_VARIANTS);
         switch(this) {
             case BASTARD_SWORD:
-                return new BastardSword(ItemTier.IRON, 6, 5.5f, tab);
+                return new BastardSword(ToolMaterials.STEEL, 6, 5.5f, tab);
             case BASTARD_SWORD_1:
-                return new BastardSword(ItemTier.IRON, 7, 5.5f, variants);
+                return new BastardSword(ToolMaterials.STEEL, 7, 5.5f, variants);
             case BASTARD_SWORD_2:
-                return new BastardSword(ItemTier.IRON, 8, 5.5f, variants);
+                return new BastardSword(ToolMaterials.STEEL, 8, 5.5f, variants);
             case BASTARD_SWORD_3:
-                return new BastardSword(ItemTier.IRON, 9, 5.5f, variants);
+                return new BastardSword(ToolMaterials.STEEL, 9, 5.5f, variants);
             case BASTARD_SWORD_4:
-                return new BastardSword(ItemTier.IRON, 10, 5.5f, variants);
+                return new BastardSword(ToolMaterials.STEEL, 10, 5.5f, variants);
             case BASTARD_SWORD_5:
-                return new BastardSword(ItemTier.IRON, 11, 5.5f, variants);
+                return new BastardSword(ToolMaterials.STEEL, 11, 5.5f, variants);
             case BASTARD_SWORD_6:
-                return new BastardSword(ItemTier.IRON, 12, 5.5f, variants);
+                return new BastardSword(ToolMaterials.STEEL, 12, 5.5f, variants);
             case BASTARD_SWORD_7:
-                return new BastardSword(ItemTier.IRON, 13, 5.5f, variants);
+                return new BastardSword(ToolMaterials.STEEL, 13, 5.5f, variants);
             case SHORT_SWORD:
-                return new Shortsword(ItemTier.IRON, 4, 8.5f, tab);
+                return new Shortsword(ToolMaterials.STEEL, 4, 8.5f, tab);
             case SHORT_SWORD_1:
-                return new Shortsword(ItemTier.IRON, 5, 8.5f, variants);
+                return new Shortsword(ToolMaterials.STEEL, 5, 8.5f, variants);
             case SHORT_SWORD_2:
-                return new Shortsword(ItemTier.IRON, 6, 8.5f, variants);
+                return new Shortsword(ToolMaterials.STEEL, 6, 8.5f, variants);
             case SHORT_SWORD_3:
-                return new Shortsword(ItemTier.IRON, 7, 8.5f, variants);
+                return new Shortsword(ToolMaterials.STEEL, 7, 8.5f, variants);
             case SHORT_SWORD_4:
-                return new Shortsword(ItemTier.IRON, 8, 8.5f, variants);
+                return new Shortsword(ToolMaterials.STEEL, 8, 8.5f, variants);
             case SHORT_SWORD_5:
-                return new Shortsword(ItemTier.IRON, 9, 8.5f, variants);
+                return new Shortsword(ToolMaterials.STEEL, 9, 8.5f, variants);
             case SHORT_SWORD_6:
-                return new Shortsword(ItemTier.IRON, 10, 8.5f, variants);
+                return new Shortsword(ToolMaterials.STEEL, 10, 8.5f, variants);
             case SHORT_SWORD_7:
-                return new Shortsword(ItemTier.IRON, 11, 8.5f, variants);
+                return new Shortsword(ToolMaterials.STEEL, 11, 8.5f, variants);
             case ZWEIHANDER:
-                return new Zweihander(ItemTier.IRON, 11, 1f, tab);
+                return new Zweihander(ToolMaterials.STEEL, 11, 1f, tab);
             case ZWEIHANDER_1:
-                return new Zweihander(ItemTier.IRON, 12, 1f, variants);
+                return new Zweihander(ToolMaterials.STEEL, 12, 1f, variants);
             case ZWEIHANDER_2:
-                return new Zweihander(ItemTier.IRON, 13, 1f, variants);
+                return new Zweihander(ToolMaterials.STEEL, 13, 1f, variants);
             case ZWEIHANDER_3:
-                return new Zweihander(ItemTier.IRON, 14, 1f, variants);
+                return new Zweihander(ToolMaterials.STEEL, 14, 1f, variants);
             case ZWEIHANDER_4:
-                return new Zweihander(ItemTier.IRON, 15, 1f, variants);
+                return new Zweihander(ToolMaterials.STEEL, 15, 1f, variants);
             case ZWEIHANDER_5:
-                return new Zweihander(ItemTier.IRON, 16, 1f, variants);
+                return new Zweihander(ToolMaterials.STEEL, 16, 1f, variants);
             case ZWEIHANDER_6:
-                return new Zweihander(ItemTier.IRON, 17, 1f, variants);
+                return new Zweihander(ToolMaterials.STEEL, 17, 1f, variants);
             case ZWEIHANDER_7:
-                return new Zweihander(ItemTier.IRON, 18, 1f, variants);
+                return new Zweihander(ToolMaterials.STEEL, 18, 1f, variants);
             case CRYSTAL_SWORD:
                 return new CrystalSword(ItemTier.DIAMOND, 14, 5f, tab);
             case BLACK_KNIFE:
@@ -256,9 +256,7 @@ public enum Swords {
         } else if(player.getItemInHand(Hand.MAIN_HAND).getItem() instanceof Zweihander) {
             player.addEffect(effects[6]);
         } else if(player.getItemInHand(Hand.MAIN_HAND).isEmpty()) {
-            for(EffectInstance ei : effectsOnPlayer) {
-                player.removeEffect(ei.getEffect());
-            }
+            player.removeAllEffects();
         }
     }
 }

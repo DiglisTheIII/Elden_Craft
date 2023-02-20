@@ -11,6 +11,8 @@ public enum Materials {
     ANCIENT_DRAGON_SMITHING_STONE,
     CARBON_SHARD,
     CRYSTAL_GEM,
+    DARK_ESSENCE,
+    DEATH_BOUND_CORE,
     LEATHER_STRIPS,
     REINFORCED_STICK,
     SHATTERED_CRYSTAL,
@@ -65,6 +67,8 @@ public enum Materials {
             case SOMBER_SMITHING_STONE_4:
             case SOMBER_SMITHING_STONE_5:
             case SOMBER_SMITHING_STONE_6:
+            case DARK_ESSENCE:
+            case DEATH_BOUND_CORE:
                 return new Item(tab);
             default:
                 return null;
@@ -118,6 +122,10 @@ public enum Materials {
                 return "shattered_crystal";
             case CRYSTAL_GEM:
                 return "crystal_gem";
+            case DARK_ESSENCE:
+                return "dark_essence";
+            case DEATH_BOUND_CORE:
+                return "death_bound_core";
         }
         return null;
     }

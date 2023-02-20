@@ -1,5 +1,4 @@
 {
-
   "item.eldencraft.steel_ingot": "Steel Ingot",
   "item.eldencraft.steel_chunk": "Steel Chunk",
   "item.eldencraft.carbon_shard": "Carbon Shard",
@@ -20,6 +19,10 @@
   "item.eldencraft.somber_smithing_stone_4": "Somber Smithing Stone (4)",
   "item.eldencraft.somber_smithing_stone_5": "Somber Smithing Stone (5)",
   "item.eldencraft.somber_smithing_stone_6": "Somber Smithing Stone (6)",
+  "item.eldencraft.dark_essence": "Dark Essence",
+  "item.eldencraft.death_bound_core": "Death Bound Core",
+  "item.eldencraft.anden": "Anden",
+  "item.eldencraft.sage": "Sage",
   "item.eldencraft.steel_hammer": "Steel Hammer",
   "item.eldencraft.reinforced_steel_hammer": "Reinforced Steel Hammer",
   "item.eldencraft.reinforced_stick": "Reinforced Stick",
@@ -69,19 +72,15 @@
   "item.eldencraft.malikeths_armor_e": "Deathbound Maliketh's Armor",
   "item.eldencraft.malikeths_greaves_e": "Deathbound Maliketh's Greaves",
   "item.eldencraft.malikeths_boots_e": "Deathbound Maliketh's Boots",
-
   "enchantment.eldencraft.death_aura": "Death Aura",
-
   "block.eldencraft.carbon_runoff": "Carbon Runoff",
   "block.eldencraft.steel_block": "Steel Block",
   "block.eldencraft.natural_geode": "Natural Geode",
   "block.eldencraft.crystal_ore": "Crystal Ore",
-
   "itemGroup.elden_craft_armor": "Elden Craft: Armor",
   "itemGroup.elden_craft_weapons": "Elden Craft: Weapons",
   "itemGroup.elden_craft_tools": "Elden Craft: Tools",
   "itemGroup.elden_craft_items": "Elden Craft: Misc",
   "itemGroup.elden_craft_blocks": "Elden Craft: Blocks",
   "itemGroup.elden_craft_variants": "Elden Craft: Weapon Variants"
-
 }
