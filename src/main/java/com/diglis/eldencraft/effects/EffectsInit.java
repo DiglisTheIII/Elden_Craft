@@ -4,11 +4,13 @@ import com.diglis.data.enums.*;
 import com.diglis.eldencraft.EldenCraft;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraftforge.fml.RegistryObject;
+import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.HashSet;
 
+@Mod.EventBusSubscriber(modid = EldenCraft.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class EffectsInit {
 
     public static final DeferredRegister<Enchantment> ENCHANTMENTS =
@@ -26,7 +28,4 @@ public class EffectsInit {
 
         return null;
     }
-
-
-
 }

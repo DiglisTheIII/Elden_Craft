@@ -1,0 +1,12 @@
+{
+    "type": "minecraft:smithing",
+    "base": {
+      "item": "eldencraft:basic_crystal_frame"
+    },
+    "addition": {
+      "item": "eldencraft:crystal_gem"
+    },
+    "result": {
+      "item": "eldencraft:crystal_sword"
+    }
+  }

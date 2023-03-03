@@ -1,5 +1,6 @@
 package com.diglis.eldencraft;
 
+import com.diglis.Entities.EntityInit;
 import com.diglis.eldencraft.block.BlockInit;
 import com.diglis.eldencraft.block.generation.GenerateOres;
 import com.diglis.eldencraft.effects.EffectsInit;
@@ -33,6 +34,7 @@ public class EldenCraft
         ItemInit.ITEMS.register(eventBus);
         BlockInit.BLOCKS.register(eventBus);
         EffectsInit.ENCHANTMENTS.register(eventBus);
+        EntityInit.ENTITY_TYPES.register(eventBus);
 
         MinecraftForge.EVENT_BUS.register(this);
         MinecraftForge.EVENT_BUS.addListener(EventPriority.HIGH, GenerateOres::addOres);

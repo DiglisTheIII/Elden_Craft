@@ -1,34 +1,20 @@
 package com.diglis.data.enums;
 import java.util.Arrays;
 import java.util.HashSet;
-import java.util.Random;
-import java.util.concurrent.ThreadLocalRandom;
 import com.diglis.eldencraft.EldenCraft;
 import com.diglis.eldencraft.ItemInit;
 import com.diglis.eldencraft.Tazz;
 import com.diglis.eldencraft.item.tabs.EldenCraftTabItems;
-import net.minecraft.block.AnvilBlock;
 import net.minecraft.client.Minecraft;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.boss.dragon.EnderDragonEntity;
-import net.minecraft.entity.monster.ZombieEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Food;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item.Properties;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Effects;
-import net.minecraft.util.DamageSource;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.Direction.Axis;
-import net.minecraft.util.math.vector.Vector3d;
-import net.minecraft.world.Dimension;
 import net.minecraft.world.Explosion;
 import net.minecraft.world.World;
 import net.minecraftforge.client.event.InputEvent;
-import net.minecraftforge.event.entity.living.LivingDeathEvent;
-import net.minecraftforge.event.entity.living.LivingDropsEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 @Mod.EventBusSubscriber(modid = EldenCraft.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
@@ -97,7 +83,7 @@ public enum Items {
     @SubscribeEvent
     public static void onClickEvent(InputEvent.ClickInputEvent event) {
         PlayerEntity player = Minecraft.getInstance().player;
-        final World world = Minecraft.getInstance().level; 
+        final World world = Minecraft.getInstance().level;
         assert player != null;
         boolean hasLevitation = player.hasEffect(Effects.LEVITATION);
         if(event.getKeyBinding().matchesMouse(0) && player.isHolding(ItemInit.TAZZ.get()) && !hasLevitation) {
@@ -110,15 +96,6 @@ public enum Items {
             for(int i = (int) player.getY(); i > 0; i--) {
                 world.explode(player, player.getX(), i, player.getZ(), 5.5f, Explosion.Mode.DESTROY);
             }
-        }
-    }
-    @SubscribeEvent
-    public void onEntityDrop(LivingDeathEvent event) {
-        //Todo fix this
-        PlayerEntity player = Minecraft.getInstance().player;
-        LivingEntity entity = player.getLastHurtMob();
-        if(entity instanceof ZombieEntity) {
-            player.addItem(new ItemStack(ItemInit.ANCIENT_DRAGON_SMITHING_STONE.get()));
         }
     }
 }

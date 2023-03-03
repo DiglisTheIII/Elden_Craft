@@ -112,13 +112,13 @@ public enum Swords {
             case ZWEIHANDER_7:
                 return new Zweihander(ToolMaterials.STEEL, 18, 1f, variants);
             case CRYSTAL_SWORD:
-                return new CrystalSword(ItemTier.DIAMOND, 14, 5f, tab);
+                return new CrystalSword(ToolMaterials.CRYSTAL, 14, 5f, tab);
             case BLACK_KNIFE:
                 return new BlackKnife(ItemTier.NETHERITE, 9, 15f, tab);
             case BASIC_STEEL_FRAME:
                 return new BasicSteelFrame(ItemTier.STONE, 0, 0.0001f, tab);
             case BASIC_CRYSTAL_FRAME:
-                return new BasicCrystalFrame(ItemTier.DIAMOND, 0, 0.0001f, tab);
+                return new BasicCrystalFrame(ToolMaterials.CRYSTAL, 0, 0.0001f, tab);
             default:
                 return null;
         }
